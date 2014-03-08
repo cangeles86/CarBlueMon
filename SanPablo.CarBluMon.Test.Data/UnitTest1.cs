@@ -9,6 +9,9 @@ namespace SanPablo.CarBluMon.Test.Data
         [TestMethod]
         public void TestMethod1()
         {
+            int index = 1;
+            index += 1;
+            Assert.AreEqual(2, index);
         }
     }
 }
