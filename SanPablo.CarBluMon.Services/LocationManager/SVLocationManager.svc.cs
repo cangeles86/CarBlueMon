@@ -11,8 +11,10 @@ namespace SanPablo.CarBluMon.Services.LocationManager
     // NOTE: In order to launch WCF Test Client for testing this service, please select SVLocationManager.svc or SVLocationManager.svc.cs at the Solution Explorer and start debugging.
     public class SVLocationManager : ISVLocationManager
     {
-        public void DoWork()
+
+        public bool RegisterLocation(double Latitude, double Longitud)
         {
+            throw new NotImplementedException();
         }
     }
 }
