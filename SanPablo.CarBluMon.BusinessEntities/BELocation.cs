@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SanPablo.CarBluMon.BusinessEntities
 {
-    public class Class1
+    public class BELocation
     {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 }

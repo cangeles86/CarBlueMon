@@ -45,12 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HibernateManager\HibernateManager.cs" />
+    <Compile Include="Location\DALocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryManager\IRepositoryManager.cs" />
+    <Compile Include="RepositoryManager\RepositoryManager.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="HibernateManager\" />
-    <Folder Include="Location\" />
-    <Folder Include="RepositoryManager\" />
+    <ProjectReference Include="..\SanPablo.CarBluMon.BusinessEntities\SanPablo.CarBluMon.BusinessEntities.csproj">
+      <Project>{58830f03-1282-493b-8990-9f772bafad7b}</Project>
+      <Name>SanPablo.CarBluMon.BusinessEntities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
