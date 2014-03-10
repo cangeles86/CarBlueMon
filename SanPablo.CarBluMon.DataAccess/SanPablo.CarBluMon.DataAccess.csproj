@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="HibernateManager\HibernateManager.cs" />
     <Compile Include="Location\DALocation.cs" />
+    <Compile Include="Location\DALocationMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryManager\IRepositoryManager.cs" />
     <Compile Include="RepositoryManager\RepositoryManager.cs" />

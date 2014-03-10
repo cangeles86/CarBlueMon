@@ -8,7 +8,8 @@ namespace SanPablo.CarBluMon.BusinessEntities
 {
     public class BELocation
     {
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
+        public virtual Int64 Id { get; set; }
+        public virtual double Latitude { get; set; }
+        public virtual double Longitude { get; set; }
     }
 }
