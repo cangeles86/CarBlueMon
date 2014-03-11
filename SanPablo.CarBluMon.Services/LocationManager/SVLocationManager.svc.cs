@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
+﻿using SanPablo.CarBluMon.BusinessEntities;
+using SanPablo.CarBluMon.BusinessLogic.Location;
 
 namespace SanPablo.CarBluMon.Services.LocationManager
 {
@@ -14,7 +10,12 @@ namespace SanPablo.CarBluMon.Services.LocationManager
 
         public bool RegisterLocation(double Latitude, double Longitud)
         {
-            throw new NotImplementedException();
+            BELocation entity = new BELocation();
+            BLLocation blEntity = new BLLocation();
+            entity.Latitude = Latitude;
+            entity.Longitude = Longitud;
+            bool result = blEntity.Register(entity);
+            return result;
         }
     }
 }
