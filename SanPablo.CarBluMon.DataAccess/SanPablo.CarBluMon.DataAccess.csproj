@@ -37,6 +37,7 @@
       <HintPath>..\SanPablo.CarBluMon.Library\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,7 +53,6 @@
     <Compile Include="RepositoryManager\IRepositoryManager.cs" />
     <Compile Include="RepositoryManager\RepositoryManager.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SanPablo.CarBluMon.BusinessEntities\SanPablo.CarBluMon.BusinessEntities.csproj">
       <Project>{58830f03-1282-493b-8990-9f772bafad7b}</Project>
