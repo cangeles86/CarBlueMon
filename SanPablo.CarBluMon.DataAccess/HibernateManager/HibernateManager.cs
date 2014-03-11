@@ -52,7 +52,7 @@ namespace SanPablo.CarBluMon.DataAccess.HibernateManager
             ISessionFactory currentSession;
             hbmConfig = ConfigureHibernate();
             HbmMapping mappings = GetMappings();
-            hbmConfig.AddDeserializedMapping(mappings, "SGC.DL");
+            hbmConfig.AddDeserializedMapping(mappings, "SanPablo.CarBluMon.DataAccess");
             SchemaMetadataUpdater.QuoteTableAndColumns(hbmConfig);
             currentSession = hbmConfig.BuildSessionFactory();
             return currentSession;
