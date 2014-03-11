@@ -1,59 +1,61 @@
-﻿using NHibernate.Cfg;
-using NHibernate.Driver;
-using NHibernate.Dialect;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NHibernate;
+﻿using NHibernate;
+using NHibernate.Cfg;
 using NHibernate.Cfg.MappingSchema;
+using NHibernate.Dialect;
+using NHibernate.Driver;
 using NHibernate.Mapping.ByCode;
-using SanPablo.CarBluMon.DataAccess.Location;
+using NHibernate.Tool.hbm2ddl;
 using SanPablo.CarBluMon.BusinessEntities;
+using SanPablo.CarBluMon.DataAccess.Location;
+using System.Data;
 
 namespace SanPablo.CarBluMon.DataAccess.HibernateManager
 {
     internal static class HibernateManager
     {
-        private static readonly ISessionFactory _sessionFactory;
-        private static readonly Configuration _configuration;
-        static HibernateManager()
+        //@"Data Source=GYSLAP031\SQL1;Initial Catalog=CarBluMon;Integrated Security=True"
+
+        private static Configuration ConfigureHibernate()
         {
-            _configuration = GetConfiguration();
-            HbmMapping mappings = GetMappings();
-            _configuration.AddDeserializedMapping(mappings, "SanPablo.CarBluMon.DataAccess");
-            _sessionFactory = GetConfiguration().BuildSessionFactory();
-        }
-        private static Configuration GetConfiguration() {
-            Configuration cfg = new Configuration();
-            
-            cfg.AddProperties(new Dictionary<string, string>
-                                {
-                                    { NHibernate.Cfg.Environment.ConnectionDriver, typeof(Sql2008ClientDriver).FullName }
-                                    , { NHibernate.Cfg.Environment.Dialect, typeof(MsSql2012Dialect).FullName }
-                                    , { NHibernate.Cfg.Environment.ConnectionString, "" }
-                                    //Only for Debug
-
-                                }
-                              );
-            return cfg;
+            var configure = new Configuration();
+            configure.SessionFactoryName("BuildIt");
+            configure.DataBaseIntegration(db =>
+            {
+                db.Dialect<MsSql2012Dialect>();
+                db.Driver<SqlClientDriver>();
+                db.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
+                db.IsolationLevel = IsolationLevel.ReadCommitted;
+                db.ConnectionString = @"Data Source=GYSLAP031\SQL1;Initial Catalog=CarBluMon;Integrated Security=True";
+                db.Timeout = 10;
+                //debugging
+                db.LogFormattedSql = true;
+                db.LogSqlInConsole = true;
+                db.AutoCommentSql = true;
+            });
+            return configure;
         }
 
-        private static HbmMapping GetMappings() {
+        private static HbmMapping GetMappings()
+        {
             ModelMapper mapper = new ModelMapper();
             mapper.AddMapping<DALocationMap>();
-            HbmMapping mapping = 
-                mapper.CompileMappingFor(new[] 
-                                            {
-                                                typeof(BELocation) 
-                                            }
-                                         );
-
+            HbmMapping mapping = mapper.CompileMappingFor(new[] 
+            {
+                typeof(BELocation),
+            });
             return mapping;
         }
-        public static ISessionFactory SessionFactory {
-            get { return _sessionFactory; } 
+
+        internal static ISessionFactory GetSession()
+        {
+            Configuration hbmConfig;
+            ISessionFactory currentSession;
+            hbmConfig = ConfigureHibernate();
+            HbmMapping mappings = GetMappings();
+            hbmConfig.AddDeserializedMapping(mappings, "SGC.DL");
+            SchemaMetadataUpdater.QuoteTableAndColumns(hbmConfig);
+            currentSession = hbmConfig.BuildSessionFactory();
+            return currentSession;
         }
 
     }
