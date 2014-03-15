@@ -36,12 +36,31 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
 
         public T FindById(int code)
         {
-            throw new NotImplementedException();
+            try
+            {
+                ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
+                T entidad = (T)session.Get<T>(code);
+                return entidad;
+            }
+            catch (Exception)
+            {
+                return null;
+            }          
         }
 
         public List<T> Find(T entity)
         {
-            throw new NotImplementedException();
+            List<T> list;
+            try
+            {
+                ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
+                list = (List<T>)session.CreateCriteria(typeof(T)).List<T>();
+                return list;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }

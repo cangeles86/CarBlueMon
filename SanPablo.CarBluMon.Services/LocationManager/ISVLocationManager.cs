@@ -1,8 +1,10 @@
-﻿using System;
+﻿using SanPablo.CarBluMon.BusinessEntities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
 namespace SanPablo.CarBluMon.Services.LocationManager
@@ -11,7 +13,18 @@ namespace SanPablo.CarBluMon.Services.LocationManager
     [ServiceContract]
     public interface ISVLocationManager
     {
+        //sustantivo plural
         [OperationContract]
-        bool RegisterLocation (double Latitude, double Longitud);
+        [WebInvoke(UriTemplate = "Location/", Method="GET")]
+        List<BELocation> GetLocations();
+
+        //[OperationContract]
+        //[WebInvoke(UriTemplate = "Location/{latitude}/{longitude}", Method = "POST")]
+        //bool RegisterLocation(string latitude, string longitude);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Location/", Method = "POST", ResponseFormat=WebMessageFormat.Json)]
+        bool RegisterLocation(BELocation entity);
+
     }
 }

@@ -29,7 +29,7 @@ namespace SanPablo.CarBluMon.BusinessLogic.Location
 
         public System.Collections.Generic.List<BELocation> Find(BELocation entity)
         {
-            throw new System.NotImplementedException();
+            return new DALocation().Find(entity);
         }
     }
 }
