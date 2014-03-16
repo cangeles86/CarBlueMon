@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SanPablo.CarBluMon.BusinessLogic.Users
 {
-    class BLUser
+    public class BLUser
     {
     }
 }

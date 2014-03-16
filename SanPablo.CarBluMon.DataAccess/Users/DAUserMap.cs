@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NHibernate.Mapping.ByCode.Conformist;
+using SanPablo.CarBluMon.BusinessEntities;
 
 namespace SanPablo.CarBluMon.DataAccess.Users
 {
-    class DAUserMap
+    public class DAUserMap : ClassMapping<BEUser>
     {
+
     }
 }
