@@ -63,11 +63,12 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
             try
             {
                 ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
-                T entidad = (T)session.Get<T>(code);
+                T entidad = (T)session.Get<T>(code);    
                 return entidad;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.Write(ex.Message);
                 return null;
             }          
         }

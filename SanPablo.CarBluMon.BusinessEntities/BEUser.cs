@@ -7,7 +7,7 @@ namespace SanPablo.CarBluMon.BusinessEntities
     public class BEUser
     {
         [DataMember(IsRequired=false)]
-        public virtual Int64 Id { get; set; }
+        public virtual int Id { get; set; }
 
         [DataMember]
         public virtual string User { get; set; }

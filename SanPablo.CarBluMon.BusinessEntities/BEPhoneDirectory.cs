@@ -7,12 +7,12 @@ namespace SanPablo.CarBluMon.BusinessEntities
     public class BEPhoneDirectory
     {
         [DataMember(IsRequired=false)]
-        public Int32 Id { get; set; }
+        public virtual int Id { get; set; }
         [DataMember]
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
         [DataMember]
-        public string Phone { get; set; }
+        public virtual string Phone { get; set; }
         [DataMember]
-        public string State { get; set; }
+        public virtual string State { get; set; }
     }
 }

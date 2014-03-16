@@ -7,8 +7,8 @@ namespace SanPablo.CarBluMon.BusinessEntities
     public class BEStatePatient
     {
         [DataMember(IsRequired=false)]
-        public Int32 Id { get; set; }
+        public virtual int Id { get; set; }
         [DataMember]
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
     }
 }
