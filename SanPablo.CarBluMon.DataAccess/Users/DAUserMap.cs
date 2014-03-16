@@ -5,6 +5,10 @@ namespace SanPablo.CarBluMon.DataAccess.Users
 {
     public class DAUserMap : ClassMapping<BEUser>
     {
-
+        public DAUserMap()
+        {
+            Table("Users");
+            Id(i => i.Id);
+        }
     }
 }

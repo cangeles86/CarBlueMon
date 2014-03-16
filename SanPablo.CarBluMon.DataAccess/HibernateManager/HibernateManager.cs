@@ -6,6 +6,7 @@ using NHibernate.Driver;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Tool.hbm2ddl;
 using SanPablo.CarBluMon.BusinessEntities;
+using SanPablo.CarBluMon.DataAccess.Users;
 using System.Data;
 
 namespace SanPablo.CarBluMon.DataAccess.HibernateManager
@@ -39,10 +40,10 @@ namespace SanPablo.CarBluMon.DataAccess.HibernateManager
         private static HbmMapping GetMappings()
         {
             ModelMapper mapper = new ModelMapper();
-            mapper.AddMapping<DALocationMap>();
+            mapper.AddMapping<DAUserMap>();
             HbmMapping mapping = mapper.CompileMappingFor(new[] 
             {
-                typeof(BELocation),
+                typeof(BEUser),
             });
             return mapping;
         }
