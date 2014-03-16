@@ -26,12 +26,36 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
 
         public bool Modify(T entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
+                session.Update(entity);
+                session.Flush();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.InnerException.Message);
+                return false;
+            }
         }
 
         public bool Remove(int code)
         {
-            throw new NotImplementedException();
+            try
+            {
+                ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
+                session.Delete(code);
+                session.Flush();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.InnerException.Message);
+                return false;
+            }
         }
 
         public T FindById(int code)

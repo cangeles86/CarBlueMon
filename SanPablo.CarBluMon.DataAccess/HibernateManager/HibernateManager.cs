@@ -6,7 +6,6 @@ using NHibernate.Driver;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Tool.hbm2ddl;
 using SanPablo.CarBluMon.BusinessEntities;
-using SanPablo.CarBluMon.DataAccess.Location;
 using System.Data;
 
 namespace SanPablo.CarBluMon.DataAccess.HibernateManager

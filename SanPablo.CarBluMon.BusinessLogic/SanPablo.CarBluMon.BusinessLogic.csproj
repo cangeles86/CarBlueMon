@@ -39,8 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelpRequests\BLHelpRequest.cs" />
+    <Compile Include="PhoneDirectory\BLPhoneDirectory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryManager\IRepositoryManager.cs" />
+    <Compile Include="Users\BLUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SanPablo.CarBluMon.BusinessEntities\SanPablo.CarBluMon.BusinessEntities.csproj">
