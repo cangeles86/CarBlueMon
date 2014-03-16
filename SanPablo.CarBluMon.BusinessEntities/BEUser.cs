@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-
 namespace SanPablo.CarBluMon.BusinessEntities
 {
     [DataContract]
-    public class BELocation
+    public class BEUser
     {
-        [DataMember (IsRequired=false)]
+        [DataMember(IsRequired=false)]
         public virtual Int64 Id { get; set; }
+
         [DataMember]
-        public virtual double Latitude { get; set; }
+        public virtual string User { get; set; }
+
         [DataMember]
-        public virtual double Longitude { get; set; }
+        public virtual string Name_Profile { get; set; }               
     }
 }

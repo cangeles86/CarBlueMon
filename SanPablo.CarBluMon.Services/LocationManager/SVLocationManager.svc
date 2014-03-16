@@ -1,7 +1,0 @@
-﻿<%@ ServiceHost 
-    Language="C#" 
-    Debug="true" 
-    Service="SanPablo.CarBluMon.Services.LocationManager.SVLocationManager" 
-    CodeBehind="SVLocationManager.svc.cs"
-    Factory="System.ServiceModel.Activation.WebServiceHostFactory"
-%>
