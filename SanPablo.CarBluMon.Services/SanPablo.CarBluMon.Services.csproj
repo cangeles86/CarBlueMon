@@ -59,9 +59,14 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HelpRequests\HelpRequest.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelpRequests\HelpRequest.svc.cs">
+      <DependentUpon>HelpRequest.svc</DependentUpon>
+    </Compile>
+    <Compile Include="HelpRequests\IHelpRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

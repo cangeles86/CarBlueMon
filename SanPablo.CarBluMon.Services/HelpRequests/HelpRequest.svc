@@ -1,0 +1,8 @@
+﻿<%@ 
+    ServiceHost 
+        Language="C#" 
+        Debug="true" 
+        Service="SanPablo.CarBluMon.Services.HelpRequests.HelpRequest" 
+        CodeBehind="HelpRequest.svc.cs" 
+        Factory="System.ServiceModel.Activation.WebServiceHostFactory"
+%>
