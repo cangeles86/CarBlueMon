@@ -1,10 +1,7 @@
 ﻿using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.BusinessLogic.RepositoryManager;
-using System;
+using SanPablo.CarBluMon.DataAccess.HelpRequests;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SanPablo.CarBluMon.BusinessLogic.HelpRequests
 {
@@ -13,27 +10,27 @@ namespace SanPablo.CarBluMon.BusinessLogic.HelpRequests
 
         public bool Register(BEHelpRequest entity)
         {
-            return new BLHelpRequest().Register(entity);
+            return new DAHelpRequest().Register(entity);
         }
 
         public bool Modify(BEHelpRequest entity)
         {
-            return new BLHelpRequest().Modify(entity);
+            return new DAHelpRequest().Modify(entity);
         }
 
         public bool Remove(int code)
         {
-            return new BLHelpRequest().Remove(code);
+            return new DAHelpRequest().Remove(code);
         }
 
         public BEHelpRequest FindById(int code)
         {
-            return new BLHelpRequest().FindById(code);
+            return new DAHelpRequest().FindById(code);
         }
 
         public List<BEHelpRequest> Find(BEHelpRequest entity)
         {
-            return new BLHelpRequest().Find(entity);
+            return new DAHelpRequest().Find(entity);
         }
     }
 }

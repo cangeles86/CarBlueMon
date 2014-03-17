@@ -1,4 +1,5 @@
-﻿using SanPablo.CarBluMon.BusinessLogic.HelpRequests;
+﻿using SanPablo.CarBluMon.BusinessEntities;
+using SanPablo.CarBluMon.BusinessLogic.HelpRequests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,24 @@ namespace SanPablo.CarBluMon.Services.HelpRequests
         {
             BLHelpRequest blHelpRequest = new BLHelpRequest();
             bool result = blHelpRequest.Register(entity);
+            return result;
+        }
+        
+        public List<BusinessEntities.BEHelpRequest> AllHelpRequest()
+        {
+            //BLHelpRequest blHelpRequest = new BLHelpRequest();
+            //BusinessEntities.BEHelpRequest entity = new BusinessEntities.BEHelpRequest();
+            List<BEHelpRequest> result = new List<BEHelpRequest>()
+                {
+                    new BEHelpRequest()
+                        { Id= 1
+                            , Latitude= 0
+                            , Longitude=0
+                            , RegisterDate=DateTime.Now
+                            , State=true
+                            , User= new BEUser() { Id=1, Name_Profile= "carlos", User="cana" }
+                        }
+                };
             return result;
         }
     }

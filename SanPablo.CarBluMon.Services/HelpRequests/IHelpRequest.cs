@@ -14,7 +14,11 @@ namespace SanPablo.CarBluMon.Services.HelpRequests
     public interface IHelpRequest
     {
         [OperationContract]
-        [WebInvoke(UriTemplate="HelpRequests", RequestFormat=WebMessageFormat.Json, Method="POST")]
+        [WebInvoke(UriTemplate = "HelpRequests", ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         bool SendHelpRequest(BEHelpRequest entity);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "HelpRequests", ResponseFormat = WebMessageFormat.Json, Method = "GET")]
+        List<BEHelpRequest> AllHelpRequest();
     }
 }

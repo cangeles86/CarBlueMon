@@ -9,10 +9,10 @@ namespace SanPablo.CarBluMon.BusinessEntities
         [DataMember(IsRequired=false)]
         public virtual int Id { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public virtual string User { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public virtual string Name_Profile { get; set; }               
     }
 }

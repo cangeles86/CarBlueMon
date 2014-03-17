@@ -1,12 +1,36 @@
-﻿using System;
+﻿using SanPablo.CarBluMon.BusinessEntities;
+using SanPablo.CarBluMon.BusinessLogic.RepositoryManager;
+using SanPablo.CarBluMon.DataAccess.PhoneDirectory;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SanPablo.CarBluMon.BusinessLogic.PhoneDirectory
 {
-    class BLPhoneDirectory
+    public class BLPhoneDirectory : IRepositoryManager<BEPhoneDirectory>
     {
+        public bool Register(BEPhoneDirectory entity)
+        {
+            return new DAPhoneDirectory().Register(entity);
+        }
+
+        public bool Modify(BEPhoneDirectory entity)
+        {
+            return new DAPhoneDirectory().Modify(entity);
+        }
+
+        public bool Remove(int code)
+        {
+            return new DAPhoneDirectory().Remove(code);
+        }
+
+        public BEPhoneDirectory FindById(int code)
+        {
+            return new DAPhoneDirectory().FindById(code);
+        }
+
+        public List<BEPhoneDirectory> Find(BEPhoneDirectory entity)
+        {
+            return new DAPhoneDirectory().Find(entity);
+        }
     }
 }

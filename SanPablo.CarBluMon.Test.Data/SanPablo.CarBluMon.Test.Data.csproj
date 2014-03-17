@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="HelpResquests\UTHelpRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\UTUsers.cs" />
   </ItemGroup>
