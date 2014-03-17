@@ -9,6 +9,6 @@ namespace SanPablo.CarBluMon.Web
 {
     public partial class Index : System.Web.UI.Page
     {
-       
+        
     }
 }
