@@ -1,7 +1,7 @@
 ﻿<%@ 
     ServiceHost Language="C#" 
     Debug="true" 
-    Service="SanPablo.CarBluMon.Services.PhoneDirectory.PhoneDirectory" 
-    CodeBehind="PhoneDirectory.svc.cs" 
+    Service="SanPablo.CarBluMon.Services.Medicine.Medicine" 
+    CodeBehind="Medicine.svc.cs" 
     Factory="System.ServiceModel.Activation.WebServiceHostFactory"
 %>

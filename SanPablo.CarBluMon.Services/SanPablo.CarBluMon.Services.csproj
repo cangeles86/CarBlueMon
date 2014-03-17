@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HelpRequests\HelpRequest.svc" />
+    <Content Include="Medicine\Medicine.svc" />
     <Content Include="PhoneDirectory\PhoneDirectory.svc" />
     <Content Include="Users\User.svc" />
     <Content Include="Web.config" />
@@ -69,6 +70,10 @@
       <DependentUpon>HelpRequest.svc</DependentUpon>
     </Compile>
     <Compile Include="HelpRequests\IHelpRequest.cs" />
+    <Compile Include="Medicine\IMedicine.cs" />
+    <Compile Include="Medicine\Medicine.svc.cs">
+      <DependentUpon>Medicine.svc</DependentUpon>
+    </Compile>
     <Compile Include="PhoneDirectory\IPhoneDirectory.cs" />
     <Compile Include="PhoneDirectory\PhoneDirectory.svc.cs">
       <DependentUpon>PhoneDirectory.svc</DependentUpon>

@@ -1,1 +1,7 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SanPablo.CarBluMon.Services.Users.User" CodeBehind="User.svc.cs" %>
+﻿<%@ 
+    ServiceHost Language="C#" 
+    Debug="true" 
+    Service="SanPablo.CarBluMon.Services.Users.User" 
+    CodeBehind="User.svc.cs" 
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory"
+%>
