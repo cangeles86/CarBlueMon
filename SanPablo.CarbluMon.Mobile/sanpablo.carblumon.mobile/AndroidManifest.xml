@@ -7,7 +7,7 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
-
+	
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -47,5 +47,7 @@
             android:label="@string/title_activity_phone_directory" >
         </activity>
     </application>
-
+	
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 </manifest>

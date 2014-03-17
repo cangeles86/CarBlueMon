@@ -2,7 +2,11 @@ package com.sanpablo.carblumon.mobile;
 
 import com.sanpablo.carbluemon.services.WCFServices;
 
+import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
@@ -23,6 +27,8 @@ public class MenuActivity extends ActionBarActivity {
 	Button btnChangeState;
 	Button btnRequestAttention;
 	Button btnECG;
+	double latitude;
+	double longitude;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,6 +44,36 @@ public class MenuActivity extends ActionBarActivity {
 		btnChangeState = (Button)findViewById(R.id.btnChangeState);
 		btnRequestAttention = (Button)findViewById(R.id.btnRequestAttention);
 		btnECG = (Button)findViewById(R.id.btnECG);
+		
+		LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1, 1000, new LocationListener() {
+			
+			@Override
+			public void onStatusChanged(String provider, int status, Bundle extras) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onProviderEnabled(String provider) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onProviderDisabled(String provider) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onLocationChanged(Location location) {
+				// TODO Auto-generated method stub
+				latitude = location.getLatitude();
+				longitude = location.getLongitude();
+			}
+		});
+		
 		
 		btnMedicine.setOnClickListener(new OnClickListener() {
 			
@@ -55,10 +91,10 @@ public class MenuActivity extends ActionBarActivity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				WCFServices client = new WCFServices();
-				Boolean result = client.SendHelpRequest(1, 0, 0);				
+				Boolean result = client.SendHelpRequest(1, latitude, longitude);				
 				
 				if (result) {
-					Toast message = Toast.makeText(getApplicationContext(), "Enviado", Toast.LENGTH_SHORT);
+					Toast message = Toast.makeText(getApplicationContext(), "Enviado" + String.valueOf(latitude) , Toast.LENGTH_SHORT);
 					message.show();
 				} else {
 					Toast message = Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT);
