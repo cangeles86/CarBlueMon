@@ -1,0 +1,10 @@
+package com.sanpablo.carbluemon.services;
+
+public class WCFServices {
+	public Boolean SendHelpRequest(int user, double latitude, double longitude)
+	{
+		
+		return true;
+		
+	}
+}

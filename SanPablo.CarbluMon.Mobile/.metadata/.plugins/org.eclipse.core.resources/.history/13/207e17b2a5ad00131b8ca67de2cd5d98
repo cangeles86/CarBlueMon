@@ -1,0 +1,31 @@
+package com.sanpablo.carbluemon.services;
+
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONObject;
+
+public class WCFServices {
+	public Boolean SendHelpRequest(int user, double latitude, double longitude)
+	{
+		HttpClient httpClient = new DefaultHttpClient();
+		HttpPost post =
+			    new HttpPost("http://10.0.2.2:2731/Api/Clientes/Cliente");
+		post.setHeader("content-type", "application/json");
+		
+		JSONObject dato = new JSONObject();
+		dato.put("Nombre", "");
+		dato.put("Telefono", "");
+		try {
+			StringEntity entity = new StringEntity(dato.toString());
+			post.setEntity(entity);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		
+		return true;		
+	}
+}

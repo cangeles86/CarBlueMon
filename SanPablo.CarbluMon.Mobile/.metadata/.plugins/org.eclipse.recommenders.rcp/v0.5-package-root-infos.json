@@ -1,0 +1,67 @@
+[
+  {
+    "symbolicName": "appcompat_v7",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b0a305d554fda030836b9691488f79e0ace17fc0",
+    "jarFileModificationDate": "2014-03-16T22:52:07.736-05:00",
+    "location": "D:\\Source Control Repository\\SanPablo.CarbluMon.Mobile\\appcompat_v7\\bin\\appcompat_v7.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7f972d2aa0fcb741fc84a9a10c98555f6f431a7a",
+    "jarFileModificationDate": "2014-03-15T21:39:55.607-05:00",
+    "location": "D:\\Android SDK Bin\\platforms\\android-19\\android.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "db0f122c99ef9f90dbab3fada6d191f2880cbb8e",
+    "jarFileModificationDate": "2014-03-16T16:55:45.978-05:00",
+    "location": "D:\\Source Control Repository\\SanPablo.CarbluMon.Mobile\\sanpablo.carblumon.mobile\\libs\\android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "db0f122c99ef9f90dbab3fada6d191f2880cbb8e",
+    "jarFileModificationDate": "2014-03-16T04:58:23.083-05:00",
+    "location": "D:\\Source Control Repository\\SanPablo.CarbluMon.Mobile\\appcompat_v7\\libs\\android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v7-appcompat",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d2fe9245d9ae17c490dbb97017f435a424fe6d38",
+    "jarFileModificationDate": "2014-03-16T04:58:23.678-05:00",
+    "location": "D:\\Source Control Repository\\SanPablo.CarbluMon.Mobile\\appcompat_v7\\libs\\android-support-v7-appcompat.jar",
+    "javaRuntime": false
+  }
+]

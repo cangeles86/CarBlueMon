@@ -1,0 +1,48 @@
+package com.sanpablo.carbluemon.services;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
+
+public class WCFServices {
+	public Boolean SendHelpRequest(int user, double latitude, double longitude)
+	{
+		Boolean result = null;
+		HttpClient httpClient = new DefaultHttpClient();
+		HttpPost post =
+			    new HttpPost("http://localhost:4462/HelpRequests/HelpRequest.svc/HelpRequests");
+		post.setHeader("content-type", "application/json");
+				
+		try {
+			JSONObject helpRequets = new JSONObject();
+			//[{"Id":1,"Latitude":0,"Longitude":0,"RegisterDate":"\/Date(1395045105458-0500)\/","State":true,"User":{"Id":1,"Name_Profile":"carlos","User":"cana"}}]
+			helpRequets.put("Latitude", "");
+			helpRequets.put("Longitude", "");
+			helpRequets.put("RegisterDate", "");
+			helpRequets.put("State", "");
+			
+			JSONObject userRequest = new JSONObject();
+			userRequest.put("id", "1");
+			
+			helpRequets.put("User",userRequest);
+			
+			StringEntity entity = new StringEntity(helpRequets.toString());
+			post.setEntity(entity);
+			
+			HttpResponse resp = httpClient.execute(post);
+            String respStr = EntityUtils.toString(resp.getEntity());
+            if(!respStr.equals("true"))
+            	result =  true;
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			result = false;
+		}
+			
+		return result;		
+	}
+}

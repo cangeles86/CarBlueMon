@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.sanpablo.carblumon.mobile.R.id"/>
+<fullyQualifiedTypeName name="android.text.InputFilter.LengthFilter"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="com.sanpablo.carblumon.mobile.MenuActivity"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="com.sanpablo.carblumon.mobile.ECKActivity"/>
+<fullyQualifiedTypeName name="com.sanpablo.carblumon.mobile.RequestAttentionActivity"/>
+<fullyQualifiedTypeName name="com.sanpablo.carblumon.mobile.ChangeStateActivity"/>
+<fullyQualifiedTypeName name="com.sanpablo.carblumon.mobile.MedicineActivity"/>
+<fullyQualifiedTypeName name="com.sanpablo.carblumon.mobile.PhoneDirectoryActivity"/>
+<fullyQualifiedTypeName name="org.apache.http.client.HttpClient"/>
+<fullyQualifiedTypeName name="org.apache.http.impl.client.DefaultHttpClient"/>
+<fullyQualifiedTypeName name="org.apache.http.client.methods.HttpPost"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="org.apache.http.entity.StringEntity"/>
+<fullyQualifiedTypeName name="org.apache.http.HttpResponse"/>
+<fullyQualifiedTypeName name="org.apache.http.util.EntityUtils"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+</qualifiedTypeNameHistroy>
