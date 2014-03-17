@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HelpRequests\HelpRequest.svc" />
+    <Content Include="PhoneDirectory\PhoneDirectory.svc" />
+    <Content Include="Users\User.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -67,11 +69,18 @@
       <DependentUpon>HelpRequest.svc</DependentUpon>
     </Compile>
     <Compile Include="HelpRequests\IHelpRequest.cs" />
+    <Compile Include="PhoneDirectory\IPhoneDirectory.cs" />
+    <Compile Include="PhoneDirectory\PhoneDirectory.svc.cs">
+      <DependentUpon>PhoneDirectory.svc</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\IUser.cs" />
+    <Compile Include="Users\User.svc.cs">
+      <DependentUpon>User.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Users\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">

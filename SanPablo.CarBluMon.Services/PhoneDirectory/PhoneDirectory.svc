@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SanPablo.CarBluMon.Services.PhoneDirectory.PhoneDirectory" CodeBehind="PhoneDirectory.svc.cs" %>
