@@ -16,6 +16,10 @@ namespace SanPablo.CarBluMon.Services.HelpRequests
         public bool SendHelpRequest(BusinessEntities.BEHelpRequest entity)
         {
             BLHelpRequest blHelpRequest = new BLHelpRequest();
+            if (entity.RegisterDate == null)
+            {
+                entity.RegisterDate = DateTime.Now;
+            }
             bool result = blHelpRequest.Register(entity);
             return result;
         }

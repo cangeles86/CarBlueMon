@@ -16,19 +16,22 @@ public class WCFServices {
 		Boolean result = null;
 		HttpClient httpClient = new DefaultHttpClient();
 		HttpPost post =
-			    new HttpPost("http://localhost:4462/HelpRequests/HelpRequest.svc/HelpRequests");
+			    new HttpPost
+			    ("http://servicecarblumon.apphb.com/HelpRequests/HelpRequest.svc/HelpRequests");
 		post.setHeader("content-type", "application/json");
 				
 		try {
+			
+			
 			JSONObject helpRequets = new JSONObject();
 			
 			helpRequets.put("Latitude", 0);
 			helpRequets.put("Longitude", 0);
-			helpRequets.put("RegisterDate", new Date());
+			
 			helpRequets.put("State", true);
 			
 			JSONObject userRequest = new JSONObject();
-			userRequest.put("id", 1);
+			userRequest.put("Id", 1);
 			
 			helpRequets.put("User",userRequest);
 			
@@ -37,9 +40,7 @@ public class WCFServices {
 			
 			HttpResponse resp = httpClient.execute(post);
             String respStr = EntityUtils.toString(resp.getEntity());
-            if(!respStr.equals("true"))
-            	result =  true;
-
+            result =  true;
 		} catch (Exception e) {
 			// TODO: handle exception
 			result = false;
