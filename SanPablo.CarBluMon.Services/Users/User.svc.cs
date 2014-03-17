@@ -11,8 +11,20 @@ namespace SanPablo.CarBluMon.Services.Users
     // NOTE: In order to launch WCF Test Client for testing this service, please select User.svc or User.svc.cs at the Solution Explorer and start debugging.
     public class User : IUser
     {
-        public void DoWork()
+
+        public bool Register(BusinessEntities.BEUser entity)
         {
+            throw new NotImplementedException();
+        }
+
+        public bool Edit(BusinessEntities.BEUser entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public BusinessEntities.BEUser GetUserById(BusinessEntities.BEUser entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,9 +1,7 @@
-﻿using System;
+﻿using SanPablo.CarBluMon.BusinessEntities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
+using System.ServiceModel.Web;
 
 namespace SanPablo.CarBluMon.Services.PhoneDirectory
 {
@@ -12,6 +10,7 @@ namespace SanPablo.CarBluMon.Services.PhoneDirectory
     public interface IPhoneDirectory
     {
         [OperationContract]
-        void DoWork();
+        [WebInvoke(UriTemplate = "Phones", ResponseFormat = WebMessageFormat.Json, Method = "GET")]
+        List<BEPhoneDirectory> AllPhones();
     }
 }

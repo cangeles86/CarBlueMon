@@ -11,8 +11,9 @@ namespace SanPablo.CarBluMon.Services.PhoneDirectory
     // NOTE: In order to launch WCF Test Client for testing this service, please select PhoneDirectory.svc or PhoneDirectory.svc.cs at the Solution Explorer and start debugging.
     public class PhoneDirectory : IPhoneDirectory
     {
-        public void DoWork()
+        public List<BusinessEntities.BEPhoneDirectory> AllPhones()
         {
+            throw new NotImplementedException();
         }
     }
 }
