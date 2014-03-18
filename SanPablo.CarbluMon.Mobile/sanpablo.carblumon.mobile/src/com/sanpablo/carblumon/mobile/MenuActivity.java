@@ -46,7 +46,8 @@ public class MenuActivity extends ActionBarActivity {
 		btnECG = (Button)findViewById(R.id.btnECG);
 		
 		LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1, 1000, new LocationListener() {
+		//locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1, 1000, new LocationListener() {
+		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 1000, new LocationListener() {
 			
 			@Override
 			public void onStatusChanged(String provider, int status, Bundle extras) {
