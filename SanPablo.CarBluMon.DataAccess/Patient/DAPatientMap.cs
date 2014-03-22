@@ -12,7 +12,7 @@ namespace SanPablo.CarBluMon.DataAccess.Patient
             Id(i => i.Id, m => { m.Column("id"); m.Generator(Generators.Identity); });
             Property(i => i.Name, m => { m.Column("name"); });
             Property(i => i.LastName, m => { m.Column("lastName"); });
-     
+            Property(i => i.RegisterDate, m => { m.Column("registerDate"); });
         }
     }
 }

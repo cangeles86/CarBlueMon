@@ -18,9 +18,8 @@ namespace SanPablo.CarBluMon.Services.Medicine
         {
             BLMedicine blMedicine = new BLMedicine();
             BusinessEntities.BEMedicine result = new BEMedicine();
-            BEMedicine result1 = blMedicine.GetMedicineByUser(int.Parse(code));
-            result = result1;            
-            return result;
+            result = blMedicine.GetMedicineByUser(int.Parse(code));
+            return new BEMedicine() { Id = result.Id, Description = result.Description, User= new BEUser(){Id = result.User.Id}, Doctor= new BEDoctor(){Id = result.Doctor.Id}};
         }
     }
 }
