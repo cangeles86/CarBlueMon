@@ -1,5 +1,4 @@
-﻿using NHibernate.Mapping;
-using NHibernate.Mapping.ByCode;
+﻿using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
 using SanPablo.CarBluMon.BusinessEntities;
 

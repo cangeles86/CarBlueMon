@@ -49,16 +49,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Allocation\DAAllocation.cs" />
+    <Compile Include="Allocation\DAAllocationMap.cs" />
+    <Compile Include="Doctor\DADoctor.cs" />
+    <Compile Include="Doctor\DADoctorMap.cs" />
+    <Compile Include="DocumentType\DADocumentType.cs" />
+    <Compile Include="DocumentType\DADocumentTypeMap.cs" />
+    <Compile Include="ECGHistory\DAECGHistory.cs" />
+    <Compile Include="ECGHistory\DAECGHistoryMap.cs" />
+    <Compile Include="EquipmentType\DAEquipmentType.cs" />
+    <Compile Include="EquipmentType\DAEquipmentTypeMap.cs" />
+    <Compile Include="Equipment\DAEquipment.cs" />
+    <Compile Include="Equipment\DAEquipmentMap.cs" />
     <Compile Include="HelpRequest\DAHelpRequest.cs" />
     <Compile Include="HelpRequest\DAHelpRequestMap.cs" />
     <Compile Include="HibernateManager\HibernateManager.cs" />
     <Compile Include="Medicine\DAMedicine.cs" />
     <Compile Include="Medicine\DAMedicineMap.cs" />
+    <Compile Include="PatientDashboard\DAPatientDashboard.cs" />
+    <Compile Include="PatientDashboard\DAPatientDashboardMap.cs" />
+    <Compile Include="Patient\DAPatient.cs" />
+    <Compile Include="Patient\DAPatientMap.cs" />
     <Compile Include="PhoneDirectory\DAPhoneDirectory.cs" />
     <Compile Include="PhoneDirectory\DAPhoneDirectoryMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryManager\IRepositoryManager.cs" />
     <Compile Include="RepositoryManager\RepositoryManager.cs" />
+    <Compile Include="StatePatient\DAStatePatient.cs" />
+    <Compile Include="StatePatient\DAStatePatientMap.cs" />
     <Compile Include="User\DAUser.cs" />
     <Compile Include="User\DAUserMap.cs" />
   </ItemGroup>
@@ -68,17 +86,7 @@
       <Name>SanPablo.CarBluMon.BusinessEntities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Allocation\" />
-    <Folder Include="Doctor\" />
-    <Folder Include="DocumentType\" />
-    <Folder Include="ECGHistory\" />
-    <Folder Include="EquipmentType\" />
-    <Folder Include="Equipment\" />
-    <Folder Include="PatientDashboard\" />
-    <Folder Include="Patient\" />
-    <Folder Include="StatePatient\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
