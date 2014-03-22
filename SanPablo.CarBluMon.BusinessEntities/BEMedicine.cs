@@ -5,14 +5,16 @@ namespace SanPablo.CarBluMon.BusinessEntities
     [DataContract]
     public class BEMedicine
     {
-        [DataMember]
+        [DataMember(IsRequired=false)]
         public int Id { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public BEUser User { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public string Description { get; set; }
-        [DataMember]
-        public BEDoctor Doctor { get; set; }
+        [DataMember(IsRequired = false)]
+        public BEDoctor Doctor { get;
+            
+            set; }
 
     }
 }

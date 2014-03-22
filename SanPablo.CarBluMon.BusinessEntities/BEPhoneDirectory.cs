@@ -8,11 +8,11 @@ namespace SanPablo.CarBluMon.BusinessEntities
     {
         [DataMember(IsRequired=false)]
         public virtual int Id { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public virtual string Description { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public virtual string Phone { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public virtual string State { get; set; }
     }
 }

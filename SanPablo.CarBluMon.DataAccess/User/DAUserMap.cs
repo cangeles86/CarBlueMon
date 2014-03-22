@@ -8,10 +8,12 @@ namespace SanPablo.CarBluMon.DataAccess.Users
     {
         public DAUserMap()
         {
-            Table("Users");
+
+            Table("User");
             Id(i => i.Id, m => { m.Column("id"); m.Generator(Generators.Identity); });
-            Property(i => i.User, m => { m.Column("user_fbk");});
-            Property(i => i.Name_Profile, m => { m.Column("name_profile"); });
+            Property(i => i.User, m => { m.Column("userFbk");});
+            Property(i => i.Name_Profile, m => { m.Column("nickname");});
+                                                                        
         }
     }
 }

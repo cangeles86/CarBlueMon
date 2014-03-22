@@ -12,9 +12,5 @@ namespace SanPablo.CarBluMon.Services.PhoneDirectory
         [OperationContract]
         [WebInvoke(UriTemplate = "Phones", ResponseFormat = WebMessageFormat.Json, Method = "GET")]
         List<BEPhoneDirectory> AllPhones();
-
-
-
-
     }
 }
