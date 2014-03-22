@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SanPablo.CarBluMon.BusinessEntities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,6 +13,6 @@ namespace SanPablo.CarBluMon.Services.Medicine
     public interface IMedicine
     {
         [OperationContract]
-        void DoWork();
+        BEMedicine GetMedicine(int code);
     }
 }

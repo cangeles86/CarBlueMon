@@ -40,6 +40,7 @@ public class WCFServices {
 			
 			HttpResponse resp = httpClient.execute(post);
             String respStr = EntityUtils.toString(resp.getEntity());
+            errorMessage  = "";
             result =  true;
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -48,5 +49,22 @@ public class WCFServices {
 		}
 			
 		return result;		
+	}
+	
+	public Boolean GetMedicine()
+	{
+		return true;
+	}
+	public Boolean GetPhoneDirectory()
+	{
+		return true;
+	}
+	public Boolean GetStatePatient()
+	{
+		return true;
+	}
+	public Boolean SetStatePatient()
+	{
+		return true;
 	}
 }

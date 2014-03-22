@@ -13,6 +13,7 @@ namespace SanPablo.CarBluMon.DataAccess.Users
             Id(i => i.Id, m => { m.Column("id"); m.Generator(Generators.Identity); });
             Property(i => i.User, m => { m.Column("userFbk");});
             Property(i => i.Name_Profile, m => { m.Column("nickname");});
+            ManyToOne(i => i.Patient, m => { m.Column("patientId"); });
                                                                         
         }
     }
