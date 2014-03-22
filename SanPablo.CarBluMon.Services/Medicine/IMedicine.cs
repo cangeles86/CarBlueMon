@@ -15,6 +15,6 @@ namespace SanPablo.CarBluMon.Services.Medicine
     {
         [OperationContract]
         [WebInvoke(UriTemplate = "Medicines/{code}", ResponseFormat = WebMessageFormat.Json, Method = "GET")]
-        BEMedicine GetMedicine(int code);
+        BEMedicine GetMedicine(string code);
     }
 }

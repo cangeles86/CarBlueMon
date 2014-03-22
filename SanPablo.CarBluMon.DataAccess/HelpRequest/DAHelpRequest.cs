@@ -5,6 +5,5 @@ namespace SanPablo.CarBluMon.DataAccess.HelpRequests
 {
     public class DAHelpRequest: RepositoryManager<BEHelpRequest>
     {
-        
     }
 }

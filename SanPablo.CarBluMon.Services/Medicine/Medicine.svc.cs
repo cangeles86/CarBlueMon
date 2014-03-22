@@ -13,11 +13,13 @@ namespace SanPablo.CarBluMon.Services.Medicine
     // NOTE: In order to launch WCF Test Client for testing this service, please select Medicine.svc or Medicine.svc.cs at the Solution Explorer and start debugging.
     public class Medicine : IMedicine
     {
-        public BusinessEntities.BEMedicine GetMedicine(int code)
+
+        public BusinessEntities.BEMedicine GetMedicine(string code)
         {
-            BEMedicine result = new BEMedicine();
-            BLMedicine blEntity = new BLMedicine();
-            result = blEntity.FindById(code);
+            BLMedicine blMedicine = new BLMedicine();
+            BusinessEntities.BEMedicine result = new BEMedicine();
+            BEMedicine result1 = blMedicine.GetMedicineByUser(int.Parse(code));
+            result = result1;            
             return result;
         }
     }

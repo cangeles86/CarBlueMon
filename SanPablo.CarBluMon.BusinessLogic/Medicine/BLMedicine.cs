@@ -1,6 +1,7 @@
 ﻿
 using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.BusinessLogic.RepositoryManager;
+using SanPablo.CarBluMon.DataAccess.Medicine;
 namespace SanPablo.CarBluMon.BusinessLogic.Medicine
 {
     public class BLMedicine: IRepositoryManager<BEMedicine>
@@ -27,7 +28,12 @@ namespace SanPablo.CarBluMon.BusinessLogic.Medicine
 
         public System.Collections.Generic.List<BEMedicine> Find(BEMedicine entity)
         {
-            throw new System.NotImplementedException();
+             return new DAMedicine().Find(entity);
         }
+        public BEMedicine GetMedicineByUser(int code)
+        {
+            return new DAMedicine().GetMedicineByUser(code);
+        }
+        
     }
 }
