@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SanPablo.CarBluMon.BusinessEntities;
 
 namespace SanPablo.CarBluMon.DataAccess.Equipment
 {
-    class DAEquipment
+    public class DAEquipment : RepositoryManager.RepositoryManager<BEEquipment>
     {
+
     }
 }

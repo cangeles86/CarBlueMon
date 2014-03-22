@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NHibernate.Mapping.ByCode.Conformist;
+using SanPablo.CarBluMon.BusinessEntities;
 
 namespace SanPablo.CarBluMon.DataAccess.Patient
 {
-    class DAPatientMap
+    public class DAPatientMap: ClassMapping<BEPatient>
     {
     }
 }
