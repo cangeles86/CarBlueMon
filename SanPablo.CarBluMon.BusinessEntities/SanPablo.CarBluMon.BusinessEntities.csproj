@@ -40,7 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BEAllocation.cs" />
+    <Compile Include="BEDoctor.cs" />
+    <Compile Include="BEDocumentType.cs" />
+    <Compile Include="BEECGHistory.cs" />
+    <Compile Include="BEEquipment.cs" />
+    <Compile Include="BEEquipmentType.cs" />
     <Compile Include="BEHelpRequest.cs" />
+    <Compile Include="BEMedicine.cs" />
+    <Compile Include="BEPatient.cs" />
+    <Compile Include="BEPatientDashboard.cs" />
     <Compile Include="BEPhoneDirectory.cs" />
     <Compile Include="BEStatePatient.cs" />
     <Compile Include="BEUser.cs" />
