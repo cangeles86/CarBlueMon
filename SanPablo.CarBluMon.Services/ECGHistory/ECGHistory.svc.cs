@@ -15,6 +15,7 @@ namespace SanPablo.CarBluMon.Services.ECGHistory
         public bool SendECG(BusinessEntities.BEECGHistory entity)
         {
             BLECGHistory blECG = new BLECGHistory();
+            entity.RegisterDate = DateTime.Now;
             bool result = blECG.Register(entity);
             return result;
         }

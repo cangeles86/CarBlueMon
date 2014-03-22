@@ -7,6 +7,7 @@ using NHibernate.Mapping.ByCode;
 using NHibernate.Tool.hbm2ddl;
 using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.DataAccess.Doctor;
+using SanPablo.CarBluMon.DataAccess.ECGHistory;
 using SanPablo.CarBluMon.DataAccess.HelpRequests;
 using SanPablo.CarBluMon.DataAccess.Medicine;
 using SanPablo.CarBluMon.DataAccess.Patient;
@@ -50,6 +51,7 @@ namespace SanPablo.CarBluMon.DataAccess.HibernateManager
             mapper.AddMapping<DAMedicineMap>();
             mapper.AddMapping<DAPatientMap>();
             mapper.AddMapping<DADoctorMap>();
+            mapper.AddMapping<DAECGHistoryMap>();
             HbmMapping mapping = mapper.CompileMappingFor(new[] 
             {
                 typeof(BEUser),
@@ -57,7 +59,8 @@ namespace SanPablo.CarBluMon.DataAccess.HibernateManager
                 typeof(BEPhoneDirectory),
                 typeof(BEMedicine),
                 typeof(BEPatient),
-                typeof(BEDoctor)
+                typeof(BEDoctor),
+                typeof(BEECGHistory)
             });
             return mapping;
         }

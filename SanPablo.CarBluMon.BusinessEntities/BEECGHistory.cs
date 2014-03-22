@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 
 namespace SanPablo.CarBluMon.BusinessEntities
 {
@@ -6,12 +7,12 @@ namespace SanPablo.CarBluMon.BusinessEntities
     public class BEECGHistory
     {
         [DataMember(IsRequired=false)]
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
         [DataMember(IsRequired = false)]
-        public BEUser User { get; set; }
+        public virtual BEUser User { get; set; }
         [DataMember(IsRequired = false)]
-        public string RegisterDate { get; set; }
+        public virtual DateTime RegisterDate { get; set; }
         [DataMember(IsRequired = false)]
-        public double Marker { get; set; }
+        public virtual double Marker { get; set; }
     }
 }
