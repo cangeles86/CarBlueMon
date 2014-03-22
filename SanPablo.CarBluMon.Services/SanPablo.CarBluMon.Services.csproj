@@ -59,6 +59,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ECGHistory\ECGHistory.svc" />
     <Content Include="HelpRequest\HelpRequest.svc" />
     <Content Include="Medicine\Medicine.svc" />
     <Content Include="PhoneDirectory\PhoneDirectory.svc" />
@@ -66,6 +67,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ECGHistory\ECGHistory.svc.cs">
+      <DependentUpon>ECGHistory.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ECGHistory\IECGHistory.cs" />
     <Compile Include="HelpRequest\HelpRequest.svc.cs">
       <DependentUpon>HelpRequest.svc</DependentUpon>
     </Compile>

@@ -1,33 +1,34 @@
 ﻿
 using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.BusinessLogic.RepositoryManager;
+using SanPablo.CarBluMon.DataAccess.ECGHistory;
 namespace SanPablo.CarBluMon.BusinessLogic.ECGHistory
 {
     public class BLECGHistory : IRepositoryManager<BEECGHistory>
     {
         public bool Register(BEECGHistory entity)
         {
-            throw new System.NotImplementedException();
+            return new DAECGHistory().Register(entity);
         }
 
         public bool Modify(BEECGHistory entity)
         {
-            throw new System.NotImplementedException();
+            return new DAECGHistory().Modify(entity);
         }
 
         public bool Remove(int code)
         {
-            throw new System.NotImplementedException();
+            return new DAECGHistory().Remove(code);
         }
 
         public BEECGHistory FindById(int code)
         {
-            throw new System.NotImplementedException();
+            return new DAECGHistory().FindById(code);
         }
 
         public System.Collections.Generic.List<BEECGHistory> Find(BEECGHistory entity)
         {
-            throw new System.NotImplementedException();
+            return new DAECGHistory().Find(entity);
         }
     }
 }
