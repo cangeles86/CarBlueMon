@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
 namespace SanPablo.CarBluMon.Services.Medicine
@@ -13,6 +14,7 @@ namespace SanPablo.CarBluMon.Services.Medicine
     public interface IMedicine
     {
         [OperationContract]
+        [WebInvoke(UriTemplate = "Medicines/{code}", ResponseFormat = WebMessageFormat.Json, Method = "GET")]
         BEMedicine GetMedicine(int code);
     }
 }

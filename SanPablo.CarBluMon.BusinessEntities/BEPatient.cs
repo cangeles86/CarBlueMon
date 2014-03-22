@@ -11,26 +11,26 @@ namespace SanPablo.CarBluMon.BusinessEntities
     public class BEPatient
     {
         [DataMember (IsRequired=false)]
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
         [DataMember(IsRequired = false)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
         [DataMember(IsRequired = false)]
-        public string LastName { get; set; }
+        public virtual string LastName { get; set; }
         [DataMember(IsRequired = false)]
-        public BEDocumentType DocumentType { get; set; }
+        public virtual BEDocumentType DocumentType { get; set; }
         [DataMember(IsRequired = false)]
-        public string DocumentNumber { get; set; }
+        public virtual string DocumentNumber { get; set; }
         [DataMember(IsRequired = false)]
-        public string Address { get; set; }
+        public virtual string Address { get; set; }
         [DataMember(IsRequired = false)]
-        public string Email { get; set; }
+        public virtual string Email { get; set; }
         [DataMember(IsRequired = false)]
-        public string HomePhone { get; set; }
+        public virtual string HomePhone { get; set; }
         [DataMember(IsRequired = false)]
-        public string Mobile { get; set; }
+        public virtual string Mobile { get; set; }
         [DataMember(IsRequired = false)]
-        public DateTime RegisterDate { get; set; }
+        public virtual DateTime RegisterDate { get; set; }
         [DataMember(IsRequired = false)]
-        public bool State { get; set; }
+        public virtual bool State { get; set; }
     }
 }

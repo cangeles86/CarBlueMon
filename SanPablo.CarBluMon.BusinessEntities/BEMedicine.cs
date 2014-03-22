@@ -6,15 +6,13 @@ namespace SanPablo.CarBluMon.BusinessEntities
     public class BEMedicine
     {
         [DataMember(IsRequired=false)]
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
         [DataMember(IsRequired = false)]
-        public BEUser User { get; set; }
+        public virtual BEUser User { get; set; }
         [DataMember(IsRequired = false)]
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
         [DataMember(IsRequired = false)]
-        public BEDoctor Doctor { get;
-            
-            set; }
+        public virtual BEDoctor Doctor {get; set; }
 
     }
 }

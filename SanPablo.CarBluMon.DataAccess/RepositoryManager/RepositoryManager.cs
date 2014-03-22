@@ -82,8 +82,9 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
                 list = (List<T>)session.CreateCriteria(typeof(T)).List<T>();
                 return list;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.Write(e.Message);
                 return null;
             }
         }

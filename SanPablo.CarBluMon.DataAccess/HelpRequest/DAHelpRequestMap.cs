@@ -9,7 +9,7 @@ namespace SanPablo.CarBluMon.DataAccess.HelpRequests
         public DAHelpRequestMap()
         {
             Table("HelpRequest");
-            Id(i => i.Id, m => { m.Column(""); m.Generator(Generators.Identity); });
+            Id(i => i.Id, m => { m.Column("id"); m.Generator(Generators.Identity); });
             Property(i => i.RegisterDate, m => { m.Column("registerDate"); });
             Property(i => i.Latitude, m => { m.Column("latitude"); });
             Property(i => i.Longitude, m => { m.Column("longitude"); });

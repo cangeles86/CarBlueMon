@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SanPablo.CarBluMon.BusinessEntities;
+using SanPablo.CarBluMon.BusinessLogic.PhoneDirectory;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -13,7 +15,10 @@ namespace SanPablo.CarBluMon.Services.PhoneDirectory
     {
         public List<BusinessEntities.BEPhoneDirectory> AllPhones()
         {
-            throw new NotImplementedException();
+            List<BEPhoneDirectory> result = new List<BEPhoneDirectory>();
+            BLPhoneDirectory blPhoneDirectory = new BLPhoneDirectory();
+            result = blPhoneDirectory.Find(null);
+            return result;
         }
     }
 }

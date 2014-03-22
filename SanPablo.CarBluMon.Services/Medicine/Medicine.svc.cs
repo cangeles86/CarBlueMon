@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SanPablo.CarBluMon.BusinessEntities;
+using SanPablo.CarBluMon.BusinessLogic.Medicine;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -13,7 +15,10 @@ namespace SanPablo.CarBluMon.Services.Medicine
     {
         public BusinessEntities.BEMedicine GetMedicine(int code)
         {
-            throw new NotImplementedException();
+            BEMedicine result = new BEMedicine();
+            BLMedicine blEntity = new BLMedicine();
+            result = blEntity.FindById(code);
+            return result;
         }
     }
 }
