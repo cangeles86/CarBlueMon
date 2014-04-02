@@ -1,8 +1,5 @@
 package com.sanpablo.carblumon.mobile;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import com.sanpablo.carbluemon.services.WCFServices;
 
 import android.content.Context;
@@ -22,7 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MenuActivity extends ActionBarActivity  {
+public class MenuActivity extends ActionBarActivity {
 
 	Button btnMedicine;
 	Button btnHelpRequest;
@@ -33,28 +30,6 @@ public class MenuActivity extends ActionBarActivity  {
 	double latitude;
 	double longitude;
 	double marker;
-	static int contador = 0;
-	static final double[] DEMO_DATA = { 0.02, 0.02, 0.02, 0.02, 0.05, 0.07, 0.06, 0.09, 0.06,
-		-0.2, 0.9, 0.5, -0.1, 0.02, 0.02, 0.04, 0.1, 0.08, 0.03, 0.02, 0.02, 0.02, 0.02, 0.02};
-	
-	Timer mTimer;
-	
-	private double SenderMarker(int index)
-	{
-		double result= 0;
-		if (contador == 22) {
-			contador = 0;
-			result =DEMO_DATA[index];
-		}
-		else {
-			result =DEMO_DATA[index];
-			contador = contador + 1;
-		}
-		return result;
-	}
-	
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -70,15 +45,6 @@ public class MenuActivity extends ActionBarActivity  {
 		btnChangeState = (Button)findViewById(R.id.btnChangeState);
 		btnRequestAttention = (Button)findViewById(R.id.btnRequestAttention);
 		btnECG = (Button)findViewById(R.id.btnECG);
-		
-		//mTimer.scheduleAtFixedRate(new TimerTask() {
-		//    @Override
-		//    public void run() {
-		//           WCFServices client = new WCFServices();		           
-		//           client.SendECGHistory(1, SenderMarker(contador));
-		//           
-		//         }
-		//    }, 10000, 1000000000);
 		
 		LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1, 1000, new LocationListener() {
@@ -106,7 +72,7 @@ public class MenuActivity extends ActionBarActivity  {
 			public void onLocationChanged(Location location) {
 				// TODO Auto-generated method stub
 				latitude = location.getLatitude();
-				longitude = location.getLongitude();				
+				longitude = location.getLongitude();
 			}
 		});
 		
@@ -130,10 +96,10 @@ public class MenuActivity extends ActionBarActivity  {
 				Boolean result = client.SendHelpRequest(1, latitude, longitude);				
 				
 				if (result) {
-					Toast message = Toast.makeText(getApplicationContext(), "Su solicitud ha sido enviada", Toast.LENGTH_SHORT);
+					Toast message = Toast.makeText(getApplicationContext(), "Enviado" + String.valueOf(latitude) , Toast.LENGTH_SHORT);
 					message.show();
 				} else {
-					Toast message = Toast.makeText(getApplicationContext(), "Error de Envio", Toast.LENGTH_SHORT);
+					Toast message = Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT);
 					message.show();
 				}
 			}
@@ -174,19 +140,8 @@ public class MenuActivity extends ActionBarActivity  {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				//Intent ecgView = new Intent(getApplicationContext(), ECKActivity.class);
-				//startActivity(ecgView);
-				WCFServices client = new WCFServices();
-				double mark= SenderMarker(contador);
-				Boolean result = client.SendECGHistory(1, mark);				
-				
-				if (result) {
-					Toast message = Toast.makeText(getApplicationContext(), "Su solicitud ha sido enviada", Toast.LENGTH_SHORT);
-					message.show();
-				} else {
-					Toast message = Toast.makeText(getApplicationContext(), "Error de Envio", Toast.LENGTH_SHORT);
-					message.show();
-				}
+				Intent ecgView = new Intent(getApplicationContext(), ECKActivity.class);
+				startActivity(ecgView);
 			}
 		});
 	}
@@ -227,4 +182,5 @@ public class MenuActivity extends ActionBarActivity  {
 			return rootView;
 		}
 	}
+
 }
