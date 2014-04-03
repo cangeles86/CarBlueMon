@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="SanPablo.CarBluMon.Web.Master.MasterPage" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Sistema de Monitoreo Cardiaco</title>
+    <link href="../Css/CarBlueMon.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/menu.js"></script>
+</head>
+<body>
+    <div id="NavArea">
+        <div id="Nav">
+            <div id="Menu">
+                <div id="Btn" class="first mmRegistration">Registro</div>
+                <div id="Btn" class="last mmAlert">Productos</div>                
+                <div id="SubMenu">
+                    <div id="SubMenuArea" class="first mmRegistrationList">
+                        <ul>
+                            <li><a href="la-clinica/quienes-somos/">Equipos</a></li>
+                            <li><a href="la-clinica/responsabilidad-social/">Pacientes</a></li>
+                            <li><a href="la-clinica/responsabilidad-social/">Asignación de Equipo</a></li>
+                        </ul>
+                    </div>
+                    <div id="SubMenuArea" class="last mmAlertList">
+                        <ul>
+                            <li><a href="http://www.sanpablosalud.com.pe/" target="_blank">Ver alertas</a></li>                            
+                        </ul>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
