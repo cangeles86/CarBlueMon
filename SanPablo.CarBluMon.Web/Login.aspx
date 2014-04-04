@@ -3,68 +3,46 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Sistema de Monitoreo Cardiaco</title>
-    <link href="css/CarBlueMon.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-        page {
-            text-align:center;
-        }
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            width: 20px;
-        }
-        .auto-style3 {
-            width: 83px;
-        }
-        .auto-style4 {
-            width: 83px;
-            text-align: right;
-        }
-        .auto-style5 {
-            width: 284px;
-        }
-    </style>
+    <link href="css/CarBlueMon.css" rel="stylesheet" type="text/css" />   
 </head>
 <body>
     <form id="frmLogin" runat="server">
         <div id="LoginArea" >
-
-            <table class="auto-style1">
+            <table>
                 <tr>
                     <td class="emptyColumn">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td class="lblColumn">&nbsp;</td>
+                    <td >&nbsp;</td>
                     <td class="emptyColumn">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="emptyColumn">&nbsp;</td>
-                    <td class="auto-style4">Usuario :</td>
-                    <td class="auto-style5">
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <td class="lblColumn">Usuario :</td>
+                    <td >
+                        <asp:TextBox ID="txtUser" CssClass="textb" runat="server"></asp:TextBox>
                     </td>
                     <td class="emptyColumn">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="emptyColumn">&nbsp;</td>
-                    <td class="auto-style4">Contraseña :</td>
-                    <td class="auto-style5">
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <td class="lblColumn">Contraseña :</td>
+                    <td >
+                        <asp:TextBox ID="txtPass" CssClass="textb" runat="server" TextMode="Password"></asp:TextBox>
                     </td>
                     <td class="emptyColumn">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="emptyColumn">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style5">
-                        <asp:Button ID="Button1" runat="server" Text="Button" />
+                    <td class="lblColumn">&nbsp;</td>
+                    <td >
+                        <asp:Button ID="btnOk" CssClass="button" runat="server" Text="Ingresar" OnClick="btnOk_Click" />
                     </td>
                     <td class="emptyColumn">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="emptyColumn">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td >&nbsp;</td>
+                    <td >&nbsp;</td>
                     <td class="emptyColumn">&nbsp;</td>
                 </tr>
             </table>

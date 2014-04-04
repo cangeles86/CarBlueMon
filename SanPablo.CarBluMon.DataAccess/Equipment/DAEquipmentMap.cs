@@ -5,5 +5,6 @@ namespace SanPablo.CarBluMon.DataAccess.Equipment
 {
     public class DAEquipmentMap: ClassMapping<BEEquipment>
     {
+
     }
 }

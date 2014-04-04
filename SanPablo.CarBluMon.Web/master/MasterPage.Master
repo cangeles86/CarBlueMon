@@ -30,5 +30,6 @@
             </div>
         </div>
     </div>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
 </body>
 </html>

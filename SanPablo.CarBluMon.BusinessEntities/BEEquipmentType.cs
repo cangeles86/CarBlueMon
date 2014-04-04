@@ -8,5 +8,7 @@ namespace SanPablo.CarBluMon.BusinessEntities
 {
     public class BEEquipmentType
     {
+        public virtual int Id { get; set; }
+        public virtual string Description { get; set; }
     }
 }

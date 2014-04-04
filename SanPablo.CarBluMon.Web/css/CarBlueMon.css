@@ -26,13 +26,25 @@ hr {
 }
 
 /*Login*/
-#LoginArea { width:67%; 
-height:30%; background:url(../img/nav-bg.jpg) 0 0 repeat-y repeat-x; color:#FFF; margin: 0 auto;
-}
+#LoginArea { width:20%; height:30%; color:#4B236B; margin: 0 auto; 
+             background:#DCDCDC; border-radius:15px;}
 /*Login - Formato de Celdas*/
 .emptyColumn {
     width:20px;
 }
+.lblColumn {
+    width:35%;
+    text-align:right;
+}
+.button {
+    border-radius:5px;
+    background:#FFF;
+}
+.textb {
+    border-radius:5px;    
+}
+
+
 /* Nav */
 #NavArea { width:100%; height:45px; background:url(../img/nav-bg.jpg) 0 0 repeat-x; position:relative; z-index:1000;}
 #NavArea #Nav { position:relative; width:1000px; height:45px; margin:0 auto; }

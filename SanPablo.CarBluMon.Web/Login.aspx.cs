@@ -11,7 +11,14 @@ namespace SanPablo.CarBluMon.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        protected void btnOk_Click(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "cangeles86@hotmail.com" && txtPass.Text == "123456")
+            {
+                Response.Redirect("~/Index.aspx");
+            }
         }
     }
 }
