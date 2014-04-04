@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanPablo.CarBluMon.Web", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanPablo.CarBluMon.Services", "SanPablo.CarBluMon.Services\SanPablo.CarBluMon.Services.csproj", "{4949EB42-2B8B-4C7F-B0E9-83C4E677E2CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanPablo.CarBluMon.Test.BusinessLogic", "SanPablo.CarBluMon.Test.BusinessLogic\SanPablo.CarBluMon.Test.BusinessLogic.csproj", "{ECD7931B-92F8-4CF0-87F7-1F7A513B1AD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanPablo.CarBluMon.Test.Services", "SanPablo.CarBluMon.Test.Services\SanPablo.CarBluMon.Test.Services.csproj", "{8DA5ED84-7DFD-4160-8749-3793D45216A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{4949EB42-2B8B-4C7F-B0E9-83C4E677E2CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4949EB42-2B8B-4C7F-B0E9-83C4E677E2CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4949EB42-2B8B-4C7F-B0E9-83C4E677E2CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD7931B-92F8-4CF0-87F7-1F7A513B1AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD7931B-92F8-4CF0-87F7-1F7A513B1AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD7931B-92F8-4CF0-87F7-1F7A513B1AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD7931B-92F8-4CF0-87F7-1F7A513B1AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA5ED84-7DFD-4160-8749-3793D45216A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA5ED84-7DFD-4160-8749-3793D45216A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA5ED84-7DFD-4160-8749-3793D45216A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA5ED84-7DFD-4160-8749-3793D45216A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +71,7 @@ Global
 		{281AADA2-A030-4607-9D67-915FAB76F959} = {D944072F-DD2D-4007-A46A-02E20B75488C}
 		{4949EB42-2B8B-4C7F-B0E9-83C4E677E2CD} = {6445B327-BED8-4B8B-A490-F19610DB8156}
 		{D0C0AC17-78C8-4F30-9654-0A5D77FF9518} = {00BCB745-06C9-4B62-8169-BD79952FFC46}
+		{ECD7931B-92F8-4CF0-87F7-1F7A513B1AD8} = {E8F12C74-45F3-40B6-8997-A6450328D827}
+		{8DA5ED84-7DFD-4160-8749-3793D45216A4} = {E8F12C74-45F3-40B6-8997-A6450328D827}
 	EndGlobalSection
 EndGlobal
