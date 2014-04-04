@@ -26,7 +26,10 @@ hr {
 }
 
 /*Login*/
-#LoginArea { width:40%; height:30%; color:ActiveBorder; }
+#LoginArea { width:67%; 
+height:30%; background:url(../img/nav-bg.jpg) 0 0 repeat-y repeat-x; color:#FFF; margin: 0 auto;
+}
+/*Login - Formato de Celdas*/
 .emptyColumn {
     width:20px;
 }

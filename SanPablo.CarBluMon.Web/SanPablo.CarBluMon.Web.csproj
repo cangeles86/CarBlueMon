@@ -65,6 +65,7 @@
     <Content Include="js\menu.js" />
     <Content Include="Login.aspx" />
     <Content Include="master\MasterPage.Master" />
+    <None Include="Properties\PublishProfiles\Web.CarBluMon.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

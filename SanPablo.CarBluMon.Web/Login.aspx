@@ -5,6 +5,9 @@
     <title>Sistema de Monitoreo Cardiaco</title>
     <link href="css/CarBlueMon.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
+        page {
+            text-align:center;
+        }
         .auto-style1 {
             width: 100%;
         }
@@ -25,7 +28,7 @@
 </head>
 <body>
     <form id="frmLogin" runat="server">
-        <div id="LoginArea">
+        <div id="LoginArea" >
 
             <table class="auto-style1">
                 <tr>
