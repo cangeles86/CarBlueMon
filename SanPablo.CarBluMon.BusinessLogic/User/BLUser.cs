@@ -17,9 +17,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.Users
             return new DAUser().Modify(entity);
         }
 
-        public bool Remove(int code)
+        public bool Remove(BEUser entity)
         {
-            return new DAUser().Remove(code);
+            return new DAUser().Remove(entity);
         }
 
         public BEUser FindById(int code)

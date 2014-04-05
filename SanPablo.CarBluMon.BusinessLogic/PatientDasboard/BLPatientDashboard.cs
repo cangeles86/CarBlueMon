@@ -15,7 +15,7 @@ namespace SanPablo.CarBluMon.BusinessLogic.PatientDasboard
             throw new System.NotImplementedException();
         }
 
-        public bool Remove(int code)
+        public bool Remove(BEPatientDashboard entity)
         {
             throw new System.NotImplementedException();
         }

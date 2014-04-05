@@ -50,7 +50,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Equipment\UTEquipment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SanPablo.CarBluMon.BusinessEntities\SanPablo.CarBluMon.BusinessEntities.csproj">
+      <Project>{58830f03-1282-493b-8990-9f772bafad7b}</Project>
+      <Name>SanPablo.CarBluMon.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SanPablo.CarBluMon.BusinessLogic\SanPablo.CarBluMon.BusinessLogic.csproj">
+      <Project>{281aada2-a030-4607-9d67-915fab76f959}</Project>
+      <Name>SanPablo.CarBluMon.BusinessLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

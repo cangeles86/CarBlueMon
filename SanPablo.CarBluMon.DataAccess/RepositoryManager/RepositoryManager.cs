@@ -41,12 +41,12 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
             }
         }
 
-        public bool Remove(int code)
+        public bool Remove(T entity)
         {
             try
             {
                 ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
-                session.Delete(code);
+                session.Delete(entity);
                 session.Flush();
                 return true;
             }
@@ -79,7 +79,15 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
             try
             {
                 ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
-                list = (List<T>)session.CreateCriteria(typeof(T)).List<T>();
+                if (entity == null)
+                {
+                    list = (List<T>)session.CreateCriteria(typeof(T)).List<T>();
+                }
+                else
+                {
+                    list = null;
+                }
+                
                 return list;
             }
             catch (Exception e)

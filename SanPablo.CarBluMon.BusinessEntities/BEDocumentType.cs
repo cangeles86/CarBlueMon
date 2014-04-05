@@ -6,10 +6,10 @@ namespace SanPablo.CarBluMon.BusinessEntities
     public class BEDocumentType
     {
         [DataMember(IsRequired=false)]
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
 
         [DataMember(IsRequired = false)]
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
 
     }
 }

@@ -17,9 +17,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.PhoneDirectory
             return new DAPhoneDirectory().Modify(entity);
         }
 
-        public bool Remove(int code)
+        public bool Remove(BEPhoneDirectory entity)
         {
-            return new DAPhoneDirectory().Remove(code);
+            return new DAPhoneDirectory().Remove(entity);
         }
 
         public BEPhoneDirectory FindById(int code)

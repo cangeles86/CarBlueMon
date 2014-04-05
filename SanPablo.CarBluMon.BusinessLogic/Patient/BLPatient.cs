@@ -16,9 +16,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.Patient
             return new DAPatient().Modify(entity);
         }
 
-        public bool Remove(int code)
+        public bool Remove(BEPatient entity)
         {
-            return new DAPatient().Remove(code);
+            return new DAPatient().Remove(entity);
         }
 
         public BEPatient FindById(int code)

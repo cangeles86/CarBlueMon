@@ -16,7 +16,7 @@ namespace SanPablo.CarBluMon.BusinessEntities
         public virtual string Description { get; set; }
 
         [DataMember(IsRequired = false)]
-        public BEEquipmentType Type { get; set; }
+        public virtual BEEquipmentType Type { get; set; }
 
         [DataMember(IsRequired = false)]
         public virtual DateTime RegisterDate { get; set; }

@@ -16,9 +16,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.Equipment
             return new DAEquipment().Modify(entity);
         }
 
-        public bool Remove(int code)
+        public bool Remove(BEEquipment entity)
         {
-            return new DAEquipment().Remove(code);
+            return new DAEquipment().Remove(entity);
         }
 
         public BEEquipment FindById(int code)

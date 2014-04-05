@@ -6,7 +6,7 @@ namespace SanPablo.CarBluMon.BusinessLogic.RepositoryManager
     {
         bool Register(T entity);
         bool Modify(T entity);
-        bool Remove(int code);
+        bool Remove(T entity);
         T FindById(int code);
         List<T> Find(T entity);
     }

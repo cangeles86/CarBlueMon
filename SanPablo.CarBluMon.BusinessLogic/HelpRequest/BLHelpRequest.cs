@@ -18,9 +18,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.HelpRequests
             return new DAHelpRequest().Modify(entity);
         }
 
-        public bool Remove(int code)
+        public bool Remove(BEHelpRequest entity)
         {
-            return new DAHelpRequest().Remove(code);
+            return new DAHelpRequest().Remove(entity);
         }
 
         public BEHelpRequest FindById(int code)

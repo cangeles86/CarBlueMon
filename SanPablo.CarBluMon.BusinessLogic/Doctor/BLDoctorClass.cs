@@ -16,9 +16,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.Doctor
             return new DADoctor().Modify(entity);
         }
 
-        public bool Remove(int code)
+        public bool Remove(BEDoctor entity)
         {
-            return new DADoctor().Remove(code);
+            return new DADoctor().Remove(entity);
         }
 
         public BEDoctor FindById(int code)

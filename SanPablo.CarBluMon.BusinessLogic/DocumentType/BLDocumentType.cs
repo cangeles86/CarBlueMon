@@ -17,9 +17,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.DocumentType
             return new DADocumentType().Modify(entity);
         }
 
-        public bool Remove(int code)
+        public bool Remove(BEDocumentType entity)
         {
-            return new DADocumentType().Remove(code);
+            return new DADocumentType().Remove(entity);
         }
 
         public BEDocumentType FindById(int code)

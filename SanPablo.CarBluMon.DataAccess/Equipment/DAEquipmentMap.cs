@@ -10,7 +10,7 @@ namespace SanPablo.CarBluMon.DataAccess.Equipment
         {
 
             Table("Equipment");
-            Id(i => i.Id, m => { m.Column("serialNumber"); m.Generator(Generators.Identity); });
+            Id(i => i.Id, m => { m.Column("id"); m.Generator(Generators.Identity); });
             Property(i => i.SerialNumber, m => { m.Column("serialNumber"); });
             Property(i => i.Description, m => { m.Column("description"); });
             ManyToOne(i => i.Type, m => { m.Column("equipmentType"); });

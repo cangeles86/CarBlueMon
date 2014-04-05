@@ -16,9 +16,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.Allocation
             return new DAAllocation().Modify(entity);
         }
 
-        public bool Remove(int code)
+        public bool Remove(BEAllocation entity)
         {
-            return new DAAllocation().Remove(code);
+            return new DAAllocation().Remove(entity);
         }
 
         public BEAllocation FindById(int code)

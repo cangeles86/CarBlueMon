@@ -16,9 +16,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.ECGHistory
             return new DAECGHistory().Modify(entity);
         }
 
-        public bool Remove(int code)
+        public bool Remove(BEECGHistory entity)
         {
-            return new DAECGHistory().Remove(code);
+            return new DAECGHistory().Remove(entity);
         }
 
         public BEECGHistory FindById(int code)
