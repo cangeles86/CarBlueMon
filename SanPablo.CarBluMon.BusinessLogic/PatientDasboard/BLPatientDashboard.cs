@@ -1,6 +1,6 @@
-﻿
-using SanPablo.CarBluMon.BusinessEntities;
+﻿using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.BusinessLogic.RepositoryManager;
+
 namespace SanPablo.CarBluMon.BusinessLogic.PatientDasboard
 {
     public class BLPatientDashboard : IRepositoryManager<BEPatientDashboard>

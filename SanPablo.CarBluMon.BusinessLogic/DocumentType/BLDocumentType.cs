@@ -1,6 +1,7 @@
-﻿
-using SanPablo.CarBluMon.BusinessEntities;
+﻿using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.BusinessLogic.RepositoryManager;
+using SanPablo.CarBluMon.DataAccess.DocumentType;
+
 namespace SanPablo.CarBluMon.BusinessLogic.DocumentType
 {
     public class BLDocumentType : IRepositoryManager<BEDocumentType>
@@ -8,27 +9,27 @@ namespace SanPablo.CarBluMon.BusinessLogic.DocumentType
 
         public bool Register(BEDocumentType entity)
         {
-            throw new System.NotImplementedException();
+            return new DADocumentType().Register(entity);
         }
 
         public bool Modify(BEDocumentType entity)
         {
-            throw new System.NotImplementedException();
+            return new DADocumentType().Modify(entity);
         }
 
         public bool Remove(int code)
         {
-            throw new System.NotImplementedException();
+            return new DADocumentType().Remove(code);
         }
 
         public BEDocumentType FindById(int code)
         {
-            throw new System.NotImplementedException();
+            return new DADocumentType().FindById(code);
         }
 
         public System.Collections.Generic.List<BEDocumentType> Find(BEDocumentType entity)
         {
-            throw new System.NotImplementedException();
+            return new DADocumentType().Find(entity);
         }
     }
 }

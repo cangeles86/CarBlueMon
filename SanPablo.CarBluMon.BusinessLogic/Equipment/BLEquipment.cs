@@ -1,33 +1,34 @@
-﻿
-using SanPablo.CarBluMon.BusinessEntities;
+﻿using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.BusinessLogic.RepositoryManager;
+using SanPablo.CarBluMon.DataAccess.Equipment;
+
 namespace SanPablo.CarBluMon.BusinessLogic.Equipment
 {
     public class BLEquipment: IRepositoryManager<BEEquipment>
     {
         public bool Register(BEEquipment entity)
         {
-            throw new System.NotImplementedException();
+            return new DAEquipment().Register(entity);
         }
 
         public bool Modify(BEEquipment entity)
         {
-            throw new System.NotImplementedException();
+            return new DAEquipment().Modify(entity);
         }
 
         public bool Remove(int code)
         {
-            throw new System.NotImplementedException();
+            return new DAEquipment().Remove(code);
         }
 
         public BEEquipment FindById(int code)
         {
-            throw new System.NotImplementedException();
+            return new DAEquipment().FindById(code);
         }
 
         public System.Collections.Generic.List<BEEquipment> Find(BEEquipment entity)
         {
-            throw new System.NotImplementedException();
+            return new DAEquipment().Find(entity);
         }
     }
 }

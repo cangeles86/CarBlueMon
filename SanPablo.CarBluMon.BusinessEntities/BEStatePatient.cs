@@ -1,5 +1,4 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
 namespace SanPablo.CarBluMon.BusinessEntities
 {
@@ -8,6 +7,7 @@ namespace SanPablo.CarBluMon.BusinessEntities
     {
         [DataMember(IsRequired=false)]
         public virtual int Id { get; set; }
+
         [DataMember(IsRequired = false)]
         public virtual string Description { get; set; }
     }

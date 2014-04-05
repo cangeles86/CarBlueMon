@@ -1,33 +1,34 @@
-﻿
-using SanPablo.CarBluMon.BusinessEntities;
+﻿using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.BusinessLogic.RepositoryManager;
+using SanPablo.CarBluMon.DataAccess.Allocation;
+
 namespace SanPablo.CarBluMon.BusinessLogic.Allocation
 {
     public class BLAllocation: IRepositoryManager<BEAllocation>
     {
         public bool Register(BEAllocation entity)
         {
-            throw new System.NotImplementedException();
+            return new DAAllocation().Register(entity);
         }
 
         public bool Modify(BEAllocation entity)
         {
-            throw new System.NotImplementedException();
+            return new DAAllocation().Modify(entity);
         }
 
         public bool Remove(int code)
         {
-            throw new System.NotImplementedException();
+            return new DAAllocation().Remove(code);
         }
 
         public BEAllocation FindById(int code)
         {
-            throw new System.NotImplementedException();
+            return new DAAllocation().FindById(code);
         }
 
         public System.Collections.Generic.List<BEAllocation> Find(BEAllocation entity)
         {
-            throw new System.NotImplementedException();
+            return new DAAllocation().Find(entity);
         }
     }
 }

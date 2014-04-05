@@ -1,33 +1,34 @@
-﻿
-using SanPablo.CarBluMon.BusinessEntities;
+﻿using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.BusinessLogic.RepositoryManager;
+using SanPablo.CarBluMon.DataAccess.Doctor;
+
 namespace SanPablo.CarBluMon.BusinessLogic.Doctor
 {
     public class BLDoctorClass : IRepositoryManager<BEDoctor>
     {
         public bool Register(BEDoctor entity)
         {
-            throw new System.NotImplementedException();
+            return new DADoctor().Register(entity);
         }
 
         public bool Modify(BEDoctor entity)
         {
-            throw new System.NotImplementedException();
+            return new DADoctor().Modify(entity);
         }
 
         public bool Remove(int code)
         {
-            throw new System.NotImplementedException();
+            return new DADoctor().Remove(code);
         }
 
         public BEDoctor FindById(int code)
         {
-            throw new System.NotImplementedException();
+            return new DADoctor().FindById(code);
         }
 
         public System.Collections.Generic.List<BEDoctor> Find(BEDoctor entity)
         {
-            throw new System.NotImplementedException();
+            return new DADoctor().Find(entity);
         }
     }
 }

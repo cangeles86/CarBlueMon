@@ -4,5 +4,6 @@ namespace SanPablo.CarBluMon.DataAccess.Doctor
 {
     public class DADoctor: RepositoryManager.RepositoryManager<BEDoctor>
     {
+
     }
 }

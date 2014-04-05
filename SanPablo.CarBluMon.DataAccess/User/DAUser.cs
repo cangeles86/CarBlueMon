@@ -5,5 +5,6 @@ namespace SanPablo.CarBluMon.DataAccess.Users
 {
     public class DAUser: RepositoryManager<BEUser>
     {
+
     }
 }

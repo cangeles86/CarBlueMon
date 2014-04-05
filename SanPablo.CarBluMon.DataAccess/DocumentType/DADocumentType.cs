@@ -4,5 +4,6 @@ namespace SanPablo.CarBluMon.DataAccess.DocumentType
 {
     public class DADocumentType : RepositoryManager.RepositoryManager<BEDocumentType>
     {
+
     }
 }

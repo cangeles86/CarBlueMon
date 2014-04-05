@@ -1,7 +1,7 @@
-﻿
-using SanPablo.CarBluMon.BusinessEntities;
+﻿using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.BusinessLogic.RepositoryManager;
 using SanPablo.CarBluMon.DataAccess.ECGHistory;
+
 namespace SanPablo.CarBluMon.BusinessLogic.ECGHistory
 {
     public class BLECGHistory : IRepositoryManager<BEECGHistory>
