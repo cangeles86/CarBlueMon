@@ -3,9 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Sistema de Monitoreo Cardiaco</title>
-    <link href="../Css/CarBlueMon.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="../js/menu.js"></script>
+
+    <link href="../css/CarBlueMon.css" rel="stylesheet" type="text/css" />
+    <link href="../css/custom-theme/jquery-ui-1.10.4.custom.css" rel="stylesheet" type="text/css" />
+    <link href="../css/custom-theme/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.blockUI.js"></script>
+
+    <script type="text/javascript" src="/js/menu.js"></script>
+    
 </head>
 <body>
     <div id="NavArea">
@@ -16,8 +24,8 @@
                 <div id="SubMenu">
                     <div id="SubMenuArea" class="first mmRegistrationList">
                         <ul>
-                            <li><a href="la-clinica/quienes-somos/">Equipos</a></li>
-                            <li><a href="la-clinica/responsabilidad-social/">Pacientes</a></li>
+                            <li><a href="../RegistrationModule/Equipment/EquipmentList.aspx">Equipos</a></li>
+                            <li><a href="../RegistrationModule/Patient/PatientList.aspx">Pacientes</a></li>
                             <li><a href="la-clinica/responsabilidad-social/">Asignación de Equipo</a></li>
                         </ul>
                     </div>
