@@ -83,6 +83,7 @@
     <Content Include="js\jquery-ui-1.10.4.custom.min.js" />
     <Content Include="js\jquery.blockUI.js" />
     <Content Include="js\menu.js" />
+    <Content Include="js\open-dialog.js" />
     <Content Include="Login.aspx" />
     <Content Include="master\MasterPage.Master" />
     <None Include="Properties\PublishProfiles\Web.CarBluMon.pubxml" />

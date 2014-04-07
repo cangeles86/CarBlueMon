@@ -1,4 +1,5 @@
-﻿using SanPablo.CarBluMon.BusinessLogic.Equipment;
+﻿using SanPablo.CarBluMon.BusinessEntities;
+using SanPablo.CarBluMon.BusinessLogic.Equipment;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,14 @@ namespace SanPablo.CarBluMon.Web.RegistrationModule.Equipment
             {
                 FindEntity();
             }
+        }
+
+        protected void jlink_Click(object sender, EventArgs e)
+        {
+            LinkButton item = (LinkButton)sender;
+            int code = int.Parse(item.CommandArgument);
+            logic.Remove(new BEEquipment() { Id=code});
+            FindEntity();
         }
     }
 }
