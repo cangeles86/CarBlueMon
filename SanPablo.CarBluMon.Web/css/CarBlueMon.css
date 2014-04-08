@@ -1,66 +1,190 @@
 ﻿body {
-	margin:0;
-	padding:0;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:12px;
-	color:#333;
-	background: #f8f8f8;
-}
-p {
-	text-align:justify;
-}
-a {
-	color:#f07522;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-img {
-	border:none;
-}
-hr {
-	margin:0;
-	padding:0;
-	border:none;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333;
+    background: #f8f8f8;
 }
 
-/*Login*/
-#LoginArea { width:35%; height:30%; color:#4B236B; margin: 0 auto; 
-             background:#DCDCDC; border-radius:15px;}
+p {
+    text-align: justify;
+}
+
+a {
+    color: #f07522;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+img {
+    border: none;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/*---------------------------------Login-------------------------------------------*/
+#LoginArea {
+    width: 400px;
+    height: 150px;
+    color: #4B236B;
+    margin: 0 auto;
+    background: #DCDCDC;
+    border-radius: 15px;
+}
 /*Login - Formato de Celdas*/
 .emptyColumn {
-    width:20px;
+    width: 20px;
 }
+
 .lblColumn {
-    width:35%;
-    text-align:right;
+    width: 100px;
+    text-align: right;
 }
+
 .button {
-    border-radius:5px;
-    background:#FFF;
+    border-radius: 5px;
+    background: #FFF;
 }
-.textb {
-    border-radius:5px;    
-}
-
-
+/*-------------------------Menu---------------------------------------------------*/
 /* Nav */
-#NavArea { width:100%; height:45px; background:url(../img/nav-bg.jpg) 0 0 repeat-x; position:relative; z-index:1000;}
-#NavArea #Nav { position:relative; width:1000px; height:45px; margin:0 auto; }
-#NavArea #Nav #Menu { width:1000px; height:45px; margin:0; padding:0; list-style:none; text-align:center; line-height:45px; background:url(../img/nav-bg.jpg) 0 0 repeat-x; }
-#NavArea #Nav #Menu #Btn { float:left; width:165px; height:45px; display:block; text-decoration:none; color:#FFF; cursor:pointer; border-right:1px solid #CCC; }
-#NavArea #Nav #Menu #Btn.first { margin-left:2px; }
-#NavArea #Nav #Menu #Btn.last { border:none; }
-#NavArea #Nav #Menu #Btn:hover { color:#FFF; background:url(../img/nav-bg-current.png) center top no-repeat; }
-.hovered { color:#FFF !important; background:url(../img/nav-bg-current.png) center top no-repeat; }
-#NavArea #Nav #Menu #SubMenu { position:absolute; top:45px; left:0; width:1000px; background:#FFF; display:none; -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.5); -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.5); box-shadow: 1px 1px 3px rgba(0,0,0,0.5); z-index: 550; opacity:0.93; }
-#NavArea #Nav #Menu #SubMenu #SubMenuArea { float:left; width:155px; display:block; text-decoration:none; color:#333; border-left:1px solid #F0F0F0; text-align:left; padding:10px 5px 5px 5px; }
-#NavArea #Nav #Menu #SubMenu #SubMenuArea.first { margin-left:2px;  border:none; }
-#NavArea #Nav #Menu #SubMenu #SubMenuArea.last { }
-#NavArea #Nav #Menu #SubMenu #SubMenuArea ul { list-style:none; margin:0; padding:0; }
-#NavArea #Nav #Menu #SubMenu #SubMenuArea ul hr { width:155px; border:none; border-bottom:1px dashed #A0A0A0; margin-bottom:15px; }
-#NavArea #Nav #Menu #SubMenu #SubMenuArea ul li { height:auto; line-height:18px; margin-bottom:10px; }
-#NavArea #Nav #Menu #SubMenu #SubMenuArea ul li a { color:#333; text-decoration:none; }
-#NavArea #Nav #Menu #SubMenu #SubMenuArea ul li a:hover { text-decoration:underline; }
+#NavArea {
+    width: 100%;
+    height: 45px;
+    background: url(../img/nav-bg.jpg) 0 0 repeat-x;
+    position: relative;
+    z-index: 1000;
+}
 
+    #NavArea #Nav {
+        position: relative;
+        width: 1000px;
+        height: 45px;
+        margin: 0 auto;
+    }
+
+        #NavArea #Nav #Menu {
+            width: 1000px;
+            height: 45px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            line-height: 45px;
+            background: url(../img/nav-bg.jpg) 0 0 repeat-x;
+        }
+
+            #NavArea #Nav #Menu #Btn {
+                float: left;
+                width: 165px;
+                height: 45px;
+                display: block;
+                text-decoration: none;
+                color: #FFF;
+                cursor: pointer;
+                border-right: 1px solid #CCC;
+            }
+
+                #NavArea #Nav #Menu #Btn.first {
+                    margin-left: 2px;
+                }
+
+                #NavArea #Nav #Menu #Btn.last {
+                    border: none;
+                }
+
+                #NavArea #Nav #Menu #Btn:hover {
+                    color: #FFF;
+                    background: url(../img/nav-bg-current.png) center top no-repeat;
+                }
+
+.hovered {
+    color: #FFF !important;
+    background: url(../img/nav-bg-current.png) center top no-repeat;
+}
+
+#NavArea #Nav #Menu #SubMenu {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 1000px;
+    background: #FFF;
+    display: none;
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    z-index: 550;
+    opacity: 0.93;
+}
+
+    #NavArea #Nav #Menu #SubMenu #SubMenuArea {
+        float: left;
+        width: 155px;
+        display: block;
+        text-decoration: none;
+        color: #333;
+        border-left: 1px solid #F0F0F0;
+        text-align: left;
+        padding: 10px 5px 5px 5px;
+    }
+
+        #NavArea #Nav #Menu #SubMenu #SubMenuArea.first {
+            margin-left: 2px;
+            border: none;
+        }
+
+        #NavArea #Nav #Menu #SubMenu #SubMenuArea.last {
+        }
+
+        #NavArea #Nav #Menu #SubMenu #SubMenuArea ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            #NavArea #Nav #Menu #SubMenu #SubMenuArea ul hr {
+                width: 155px;
+                border: none;
+                border-bottom: 1px dashed #A0A0A0;
+                margin-bottom: 15px;
+            }
+
+            #NavArea #Nav #Menu #SubMenu #SubMenuArea ul li {
+                height: auto;
+                line-height: 18px;
+                margin-bottom: 10px;
+            }
+
+                #NavArea #Nav #Menu #SubMenu #SubMenuArea ul li a {
+                    color: #333;
+                    text-decoration: none;
+                }
+
+                    #NavArea #Nav #Menu #SubMenu #SubMenuArea ul li a:hover {
+                        text-decoration: underline;
+                    }
+/*-------------------------Controles---------------------------------------------------*/
+.asp-textbox {
+    width: 100%;
+    background: #FFFFFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.35);
+    border: 1px solid #C7C7C7;
+    margin: 0 auto;
+    padding: 4px 0;
+}
+.asp-datagrid {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}

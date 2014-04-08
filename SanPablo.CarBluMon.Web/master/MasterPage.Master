@@ -12,29 +12,34 @@
     <script type="text/javascript" src="/js/menu.js"></script>
     <script type="text/javascript" src="/js/open-dialog.js"></script>        
 </head>
-<body>
-    <div id="NavArea">
-        <div id="Nav">
-            <div id="Menu">
-                <div id="Btn" class="first mmRegistration">Registro</div>
-                <div id="Btn" class="last mmAlert">Productos</div>                
-                <div id="SubMenu">
-                    <div id="SubMenuArea" class="first mmRegistrationList">
-                        <ul>
-                            <li><a href="/RegistrationModule/Equipment/EquipmentList.aspx">Equipos</a></li>
-                            <li><a href="/RegistrationModule/Patient/PatientList.aspx">Pacientes</a></li>
-                            <li><a href="la-clinica/responsabilidad-social/">Asignación de Equipo</a></li>
-                        </ul>
+<body> 
+    
+    <%--<div id="content-manager" style="margin: 10px 10px 10px 10px; border: 1px solid">--%>    
+        <!--Menu de la aplicación -->
+        <div id="NavArea">
+            <div id="Nav">
+                <div id="Menu">
+                    <div id="Btn" class="first mmRegistration">Registro</div>
+                    <div id="Btn" class="last mmAlert">Productos</div>
+                    <div id="SubMenu">
+                        <div id="SubMenuArea" class="first mmRegistrationList">
+                            <ul>
+                                <li><a href="/RegistrationModule/Equipment/EquipmentList.aspx">Equipos</a></li>
+                                <li><a href="/RegistrationModule/Patient/PatientList.aspx">Pacientes</a></li>
+                                <li><a href="la-clinica/responsabilidad-social/">Asignación de Equipo</a></li>
+                            </ul>
+                        </div>
+                        <div id="SubMenuArea" class="last mmAlertList">
+                            <ul>
+                                <li><a href="http://www.sanpablosalud.com.pe/" target="_blank">Ver alertas</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div id="SubMenuArea" class="last mmAlertList">
-                        <ul>
-                            <li><a href="http://www.sanpablosalud.com.pe/" target="_blank">Ver alertas</a></li>                            
-                        </ul>
-                    </div>                    
                 </div>
             </div>
         </div>
-    </div>
-    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <!--Contenido de las paginas web -->
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    <%--</div>--%>
 </body>
 </html>

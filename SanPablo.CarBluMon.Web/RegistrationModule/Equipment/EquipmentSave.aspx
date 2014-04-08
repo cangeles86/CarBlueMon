@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/MasterPage.Master" AutoEventWireup="true" CodeBehind="EquipmentSave.aspx.cs" Inherits="SanPablo.CarBluMon.Web.RegistrationModule.Equipment.EquipmentSave" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
     <form id="form1" runat="server">
+        
         <table style="width: 100%;">
             <tr>
                 <td style="width:20%">&nbsp;</td>
@@ -23,11 +25,26 @@
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:60%" colspan="2">
-                    <asp:Button ID="btnOk" runat="server" Text="Guardar" OnClick="btnOk_Click" />
+                    <asp:Button ID="btnOk" runat="server" Text="Guardar" OnClientClick="return validate();" OnClick="btnOk_Click" />
                     <asp:Button ID="btnCancel" runat="server" Text="Cancelar" OnClick="btnCancel_Click" />
                 </td>
                 <td style="width:20%">&nbsp;</td>
             </tr>
         </table>
     </form>
+    <script type="text/javascript">
+        function validate() {
+            var result = true;
+            if ($('input[id$=txtSerialNumber]').val() == "" || $('input[id$=txtSerialNumber]').val() == undefined) {
+                alert("Ingrese Numero de Serie");
+                result = false;
+            }
+            else if ($('input[id$=txtDescription]').val() == "" || $('input[id$=txtDescription]').val() == undefined) {
+                alert("Ingrese Descripcion");
+                result = false;
+            }
+            return result;
+        }
+
+    </script>
 </asp:Content>

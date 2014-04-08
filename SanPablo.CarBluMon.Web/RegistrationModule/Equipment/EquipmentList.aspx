@@ -17,10 +17,15 @@
         <a href="EquipmentSave.aspx?ope=new">Nuevo</a>        
         <br />
         <br />
-        <asp:DataGrid ID="DgEquipment" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" GridLines="None">
+        <asp:DataGrid ID="DgEquipment" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" GridLines="None" CssClass="asp-datagrid">
             <Columns>
                 <asp:BoundColumn DataField="SerialNumber" HeaderText="N° Serie"></asp:BoundColumn>
                 <asp:BoundColumn DataField="Description" HeaderText="Descripción"></asp:BoundColumn>
+                <asp:TemplateColumn HeaderText="Tipo">
+                    <ItemTemplate>
+                        <asp:Label ID="lblType" runat="server" Text='<%# Eval("Type.Description") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateColumn>
                 <asp:HyperLinkColumn Text="Editar" DataNavigateUrlField="Id" DataNavigateUrlFormatString="EquipmentSave.aspx?ope=edit&amp;code={0}"></asp:HyperLinkColumn>                
                 <asp:TemplateColumn>
                     <ItemTemplate>
@@ -28,11 +33,11 @@
                     </ItemTemplate>
                 </asp:TemplateColumn>
             </Columns>
-            <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
-            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
-            <ItemStyle BackColor="#DEDFDE" ForeColor="Black" />
-            <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
-            <SelectedItemStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White"/>
+            <FooterStyle BackColor="#C6C3C6" ForeColor="Black" CssClass="asp-datagrid" />
+            <HeaderStyle BackColor="#4B236B" Font-Bold="True" ForeColor="#E7E7FF" CssClass="asp-datagrid" />
+            <ItemStyle BackColor="#DEDFDE" ForeColor="Black" CssClass="asp-datagrid" />
+            <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" CssClass="asp-datagrid" />
+            <SelectedItemStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" CssClass="asp-datagrid" />
         </asp:DataGrid>
         <br />
         
