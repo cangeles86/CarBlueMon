@@ -26,9 +26,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.ECGHistory
             return new DAECGHistory().FindById(code);
         }
 
-        public System.Collections.Generic.List<BEECGHistory> Find(BEECGHistory entity)
+        public System.Collections.Generic.List<BEECGHistory> Find(params string[][] criteriaListEq)
         {
-            return new DAECGHistory().Find(entity);
+            return new DAECGHistory().Find(criteriaListEq);
         }
     }
 }

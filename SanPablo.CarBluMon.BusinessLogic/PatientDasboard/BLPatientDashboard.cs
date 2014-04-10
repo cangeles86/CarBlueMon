@@ -25,7 +25,7 @@ namespace SanPablo.CarBluMon.BusinessLogic.PatientDasboard
             throw new System.NotImplementedException();
         }
 
-        public System.Collections.Generic.List<BEPatientDashboard> Find(BEPatientDashboard entity)
+        public System.Collections.Generic.List<BEPatientDashboard> Find(params string[][] criteriaListEq)
         {
             throw new System.NotImplementedException();
         }

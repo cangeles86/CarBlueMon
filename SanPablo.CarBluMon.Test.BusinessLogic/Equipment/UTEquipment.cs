@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SanPablo.CarBluMon.BusinessEntities;
 using SanPablo.CarBluMon.BusinessLogic.Equipment;
+using System.Collections.Generic;
 
 namespace SanPablo.CarBluMon.Test.BusinessLogic.Equipment
 {
@@ -13,7 +14,7 @@ namespace SanPablo.CarBluMon.Test.BusinessLogic.Equipment
         {
             //Definción de variables
             //BEEquipment entity = new BEEquipment();
-            //BLEquipment logic = new BLEquipment();
+            BLEquipment logic = new BLEquipment();
             //bool result;
 
             //Insertar valores
@@ -36,7 +37,11 @@ namespace SanPablo.CarBluMon.Test.BusinessLogic.Equipment
             //entity.Id = 5;
             //result = logic.Remove(entity);
             //Assert.AreEqual(true, result);
-            Assert.AreEqual(true, true);
+
+            List<BEEquipment> entityList = logic.Find(new string[] { "Eq|Ns", "Description", "Holter", "Type" });
+            Assert.AreEqual(1, entityList.Count);
+            //Assert.AreEqual(true, true);
+
         }
     }
 }

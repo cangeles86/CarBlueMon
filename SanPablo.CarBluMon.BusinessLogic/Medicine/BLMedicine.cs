@@ -26,9 +26,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.Medicine
             return new DAMedicine().FindById(code);
         }
 
-        public System.Collections.Generic.List<BEMedicine> Find(BEMedicine entity)
+        public System.Collections.Generic.List<BEMedicine> Find(params string[][] criteriaListEq)
         {
-             return new DAMedicine().Find(entity);
+             return new DAMedicine().Find(criteriaListEq);
         }
         public BEMedicine GetMedicineByUser(int code)
         {

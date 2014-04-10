@@ -26,9 +26,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.StatePatient
             return new DAStatePatient().FindById(code);
         }
 
-        public System.Collections.Generic.List<BEStatePatient> Find(BEStatePatient entity)
+        public System.Collections.Generic.List<BEStatePatient> Find(params string[][] criteriaListEq)
         {
-            return new DAStatePatient().Find(entity);
+            return new DAStatePatient().Find(criteriaListEq);
         }
     }
 }

@@ -26,9 +26,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.Equipment
             return new DAEquipment().FindById(code);
         }
 
-        public System.Collections.Generic.List<BEEquipment> Find(BEEquipment entity)
+        public System.Collections.Generic.List<BEEquipment> Find(params string[][] criteriaListEq)
         {
-            return new DAEquipment().Find(entity);
+            return new DAEquipment().Find(criteriaListEq);
         }
     }
 }

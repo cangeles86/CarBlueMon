@@ -49,6 +49,33 @@ namespace SanPablo.CarBluMon.Web.RegistrationModule.Equipment {
         protected global::System.Web.UI.WebControls.DropDownList ddlEquipmentType;
         
         /// <summary>
+        /// lblRegisterDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRegisterDate;
+        
+        /// <summary>
+        /// ddlState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlState;
+        
+        /// <summary>
+        /// lblAssign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAssign;
+        
+        /// <summary>
         /// btnOk control.
         /// </summary>
         /// <remarks>

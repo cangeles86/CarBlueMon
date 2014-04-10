@@ -27,9 +27,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.PhoneDirectory
             return new DAPhoneDirectory().FindById(code);
         }
 
-        public List<BEPhoneDirectory> Find(BEPhoneDirectory entity)
+        public List<BEPhoneDirectory> Find(params string[][] criteriaListEq)
         {
-            return new DAPhoneDirectory().Find(entity);
+            return new DAPhoneDirectory().Find(criteriaListEq);
         }
     }
 }

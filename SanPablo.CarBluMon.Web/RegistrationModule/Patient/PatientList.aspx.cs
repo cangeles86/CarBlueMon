@@ -12,10 +12,11 @@ namespace SanPablo.CarBluMon.Web.RegistrationModule.Patient
     public partial class PatientList : System.Web.UI.Page
     {
         private BLPatient logic = new BLPatient();
+        private string[] criterioActivo = new string[] { "Activo", "State" };
 
         private void FindEntity()
         {
-            dgPatient.DataSource = logic.Find(null);
+            dgPatient.DataSource = logic.Find(criterioActivo);
             dgPatient.DataBind();
         }
         protected void Page_Load(object sender, EventArgs e)
@@ -32,6 +33,22 @@ namespace SanPablo.CarBluMon.Web.RegistrationModule.Patient
             int code = int.Parse(item.CommandArgument);
             logic.Remove(new BEPatient() { Id = code });
             FindEntity();
+        }
+
+        protected void btnFind_Click(object sender, EventArgs e)
+        {
+            string[] criteriaName = null;
+            string[] criteriaLastName = null;
+            if (txtName.Text.Trim() != string.Empty)
+            {
+                criteriaName = new string[] { "Lk", "Name", txtName.Text };
+            }
+            if (txtLastName.Text.Trim() != string.Empty)
+            {
+                criteriaLastName = new string[] { "Lk", "LastName", txtLastName.Text };
+            }
+            dgPatient.DataSource = logic.Find(criterioActivo, criteriaName, criteriaLastName);
+            dgPatient.DataBind();
         }
     }
 }

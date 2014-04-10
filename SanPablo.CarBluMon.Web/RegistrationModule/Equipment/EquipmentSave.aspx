@@ -7,20 +7,33 @@
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:20%">N° Serie</td>
-                <td style="width:40%"><asp:TextBox ID="txtSerialNumber" runat="server"></asp:TextBox></td>
+                <td style="width:40%"><asp:TextBox ID="txtSerialNumber" runat="server" MaxLength="75"></asp:TextBox></td>
                 <td style="width:20%">&nbsp;</td>
             </tr>
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:20%">Descripción</td>
-                <td style="width:40%"><asp:TextBox ID="txtDescription" runat="server"></asp:TextBox></td>
+                <td style="width:40%"><asp:TextBox ID="txtDescription" runat="server" MaxLength="150"></asp:TextBox></td>
                 <td style="width:20%">&nbsp;</td>
             </tr>
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:20%">Tipo</td>
                 <td style="width:40%"><asp:DropDownList ID="ddlEquipmentType" runat="server"></asp:DropDownList></td>
+                <td style="width:20%">
+                    <asp:Label ID="lblRegisterDate" runat="server" Visible="False"></asp:Label>
+                </td>
+            </tr>
+            <tr>
                 <td style="width:20%">&nbsp;</td>
+                <td style="width:20%">Tipo</td>
+                <td style="width:40%"><asp:DropDownList ID="ddlState" runat="server">
+                    <asp:ListItem Value="1">Activo</asp:ListItem>
+                    <asp:ListItem Value="0">De Baja</asp:ListItem>
+                    </asp:DropDownList></td>
+                <td style="width:20%">
+                    <asp:Label ID="lblAssign" runat="server" Visible="False"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td style="width:20%">&nbsp;</td>

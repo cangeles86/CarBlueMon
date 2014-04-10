@@ -28,9 +28,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.HelpRequests
             return new DAHelpRequest().FindById(code);
         }
 
-        public List<BEHelpRequest> Find(BEHelpRequest entity)
+        public List<BEHelpRequest> Find(params string[][] criteriaListEq)
         {
-            return new DAHelpRequest().Find(entity);
+            return new DAHelpRequest().Find(criteriaListEq);
         }
     }
 }

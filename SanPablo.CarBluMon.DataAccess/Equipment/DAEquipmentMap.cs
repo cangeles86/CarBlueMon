@@ -1,4 +1,5 @@
-﻿using NHibernate.Mapping.ByCode;
+﻿using NHibernate;
+using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
 using SanPablo.CarBluMon.BusinessEntities;
 
@@ -15,7 +16,8 @@ namespace SanPablo.CarBluMon.DataAccess.Equipment
             Property(i => i.Description, m => { m.Column("description"); });
             ManyToOne(i => i.Type, m => { m.Column("equipmentType"); });
             Property(i => i.RegisterDate, m => { m.Column("registerDate"); });
-            Property(i => i.State, m => { m.Column("state"); });
+            Property(i => i.Assign, m => { m.Column("isAssign"); m.Type(NHibernateUtil.Boolean); });
+            Property(i => i.State, m => { m.Column("state"); m.Type(NHibernateUtil.Boolean); });
 
         }
     }

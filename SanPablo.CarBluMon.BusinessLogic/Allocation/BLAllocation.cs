@@ -26,9 +26,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.Allocation
             return new DAAllocation().FindById(code);
         }
 
-        public System.Collections.Generic.List<BEAllocation> Find(BEAllocation entity)
+        public System.Collections.Generic.List<BEAllocation> Find(params string[][] criteriaListEq)
         {
-            return new DAAllocation().Find(entity);
+            return new DAAllocation().Find(criteriaListEq);
         }
     }
 }

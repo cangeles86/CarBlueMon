@@ -27,9 +27,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.Users
             return new DAUser().FindById(code);
         }
 
-        public List<BEUser> Find(BEUser entity)
+        public List<BEUser> Find(params string[][] criteriaListEq)
         {
-            return new DAUser().Find(entity);
+            return new DAUser().Find(criteriaListEq);
         }
     }
 }

@@ -48,9 +48,26 @@ namespace SanPablo.CarBluMon.Web.RegistrationModule.Equipment
             entity.SerialNumber = txtSerialNumber.Text;
             entity.Description = txtDescription.Text;
             entity.State = true;
-            entity.RegisterDate = DateTime.Now;
+            if (ope =="new")
+            {
+                entity.RegisterDate = DateTime.Now;
+                entity.Assign = false;
+            }
+            else
+            {
+                entity.RegisterDate = DateTime.Parse(lblRegisterDate.Text);
+                entity.Assign = bool.Parse(lblAssign.Text);
+            }
             entity.Type = new BEEquipmentType();
             entity.Type.Id = int.Parse(ddlEquipmentType.SelectedValue);
+            if (ddlState.SelectedValue =="1")
+            {                
+                entity.State = true;
+            }
+            else
+            {
+                entity.State = false;
+            }                     
             return entity;
         }
 
@@ -58,7 +75,18 @@ namespace SanPablo.CarBluMon.Web.RegistrationModule.Equipment
         {
             txtSerialNumber.Text = entity.SerialNumber;
             txtDescription.Text = entity.Description;
-            ddlEquipmentType.SelectedValue = entity.Type.Id.ToString();            
+            ddlEquipmentType.SelectedValue = entity.Type.Id.ToString();
+            if (entity.State)
+            {
+                ddlState.SelectedValue = "1";
+            }
+            else
+            {
+                ddlState.SelectedValue = "0";
+            }
+            lblAssign.Text = entity.Assign.ToString();
+            lblRegisterDate.Text = entity.RegisterDate.ToString();
+            
         }
         protected void btnCancel_Click(object sender, EventArgs e)
         {

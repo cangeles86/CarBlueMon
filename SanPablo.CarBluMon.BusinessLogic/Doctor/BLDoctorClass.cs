@@ -26,9 +26,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.Doctor
             return new DADoctor().FindById(code);
         }
 
-        public System.Collections.Generic.List<BEDoctor> Find(BEDoctor entity)
+        public System.Collections.Generic.List<BEDoctor> Find(params string[][] criteriaListEq)
         {
-            return new DADoctor().Find(entity);
+            return new DADoctor().Find(criteriaListEq);
         }
     }
 }

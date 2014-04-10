@@ -8,7 +8,7 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
         bool Modify(T entity);
         bool Remove(T entity);
         T FindById(int code);
-        List<T> Find(T entity);
+        List<T> Find(params string[][] criteriaListEq);
 
     }
 }

@@ -12,9 +12,31 @@
         }
     </script>
     <form name="form1" runat="server">
-        <a href="PatientSave.aspx?ope=new">Nuevo</a>
+        <a href="PatientSave.aspx?ope=new">
+            <h2>Nuevo</h2>
+        </a>
         <br />
-        <br />
+        <table style="width: 100%;">
+            <tr>
+                <td class="emptyColumn"></td>
+                <td class="lblColumn">Nombre:</td>
+                <td>
+                    <asp:TextBox ID="txtName" runat="server" CssClass="asp-textbox" MaxLength="150"></asp:TextBox></td>
+                <td style="width: 70px">
+                    <asp:Button ID="btnFind" runat="server" Text="Buscar" CssClass="ui-button" OnClick="btnFind_Click" /></td>
+                <td style="width: auto"></td>
+                <td class="emptyColumn"></td>
+            </tr>
+            <tr>
+                <td class="emptyColumn"></td>
+                <td class="lblColumn">Apellido:</td>
+                <td style="width: 250px">
+                    <asp:TextBox ID="txtLastName" runat="server" CssClass="asp-textbox" MaxLength="150"></asp:TextBox></td>
+                <td style="width: 70px"></td>
+                <td style="width: auto"></td>
+                <td class="emptyColumn"></td>
+            </tr>
+        </table>
         <asp:DataGrid ID="dgPatient" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
             <AlternatingItemStyle BackColor="#DCDCDC" />
             <Columns>

@@ -1,4 +1,5 @@
 ﻿using NHibernate;
+using NHibernate.Criterion;
 using System;
 using System.Collections.Generic;
 
@@ -72,22 +73,55 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
                 return null;
             }          
         }
-
-        public List<T> Find(T entity)
+                
+        public List<T> Find(params string [][] criteriaListEq)
         {
             List<T> list;
             try
             {
                 ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
-                if (entity == null)
+                if (criteriaListEq == null)
                 {
                     list = (List<T>)session.CreateCriteria(typeof(T)).List<T>();
                 }
                 else
                 {
-                    list = null;
+                    ICriteria criteria = session.CreateCriteria(typeof(T));
+                    foreach (string[] item in criteriaListEq)
+                    {
+                        /*String Array: 
+                         * Index 0: Compare Type
+                         * Index 1: Data Fied
+                         * Index 2: Value
+                         * Index 3: Alias
+                         */
+                        if (item != null)
+                        {
+                            switch (item[0])
+                            {
+                                case "Eq":
+                                    criteria.Add(Expression.Eq(item[1], item[2]));
+                                    break;
+                                case "Eq|Ns":
+                                    criteria.CreateAlias(item[3], "ref");
+                                    criteria.Add(Expression.Eq("ref." + item[1], item[2]));
+                                    break;
+                                case "Lk":
+                                    criteria.Add(Expression.Like(item[1], item[2] + "%"));
+                                    break;
+                                case "Activo":
+                                    criteria.Add(Expression.Eq(item[1], true));
+                                    break;
+                                case "Inactivo":
+                                    criteria.Add(Expression.Eq(item[1], false));
+                                    break;                                    
+                                default:
+                                    break;
+                            }
+                        }                        
+                    }
+                    list = (List<T>)criteria.List<T>();
                 }
-                
                 return list;
             }
             catch (Exception e)
@@ -95,6 +129,6 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
                 Console.Write(e.Message);
                 return null;
             }
-        }
+        }        
     }
 }

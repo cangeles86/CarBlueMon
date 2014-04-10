@@ -27,9 +27,9 @@ namespace SanPablo.CarBluMon.BusinessLogic.DocumentType
             return new DADocumentType().FindById(code);
         }
 
-        public System.Collections.Generic.List<BEDocumentType> Find(BEDocumentType entity)
+        public System.Collections.Generic.List<BEDocumentType> Find(params string[][] criteriaListEq)
         {
-            return new DADocumentType().Find(entity);
+            return new DADocumentType().Find(criteriaListEq);
         }
     }
 }

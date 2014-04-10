@@ -1,4 +1,5 @@
-﻿using NHibernate.Mapping.ByCode;
+﻿using NHibernate;
+using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
 using SanPablo.CarBluMon.BusinessEntities;
 
@@ -19,7 +20,7 @@ namespace SanPablo.CarBluMon.DataAccess.Patient
             Property(i => i.HomePhone, m => { m.Column("homePhone"); });
             Property(i => i.Mobile, m => { m.Column("mobile"); });
             Property(i => i.RegisterDate, m => { m.Column("registerDate"); });
-            Property(i => i.State, m => { m.Column("state"); });
+            Property(i => i.State, m => { m.Column("state"); m.Type(NHibernateUtil.Boolean); });
         }
     }
 }
