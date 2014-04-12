@@ -27,11 +27,7 @@ namespace SanPablo.CarBluMon.Web.RegistrationModule.Allocation
 
         private void GetDocumentType()
         {
-            List<BEDocumentType> documents = logicDocType.Find(null);
-            if (documents != null)
-            {
-                documents.Add(new BEDocumentType() { Id = 0, Description = "(Todas)" });
-            }
+            List<BEDocumentType> documents = logicDocType.Find(null);            
             ddlDocumentType.DataSource = documents;
             ddlDocumentType.DataValueField = "Id";
             ddlDocumentType.DataTextField = "Description";
