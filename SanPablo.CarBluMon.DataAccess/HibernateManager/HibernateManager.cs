@@ -35,12 +35,12 @@ namespace SanPablo.CarBluMon.DataAccess.HibernateManager
                 db.Driver<SqlClientDriver>();
                 db.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
                 db.IsolationLevel = IsolationLevel.ReadCommitted;
-                db.ConnectionString = @"Data Source=GYSLAP031\SQL1;Initial Catalog=CarBluMon;Integrated Security=True";
-//                db.ConnectionString = @"Data Source=354aa641-94f7-47c1-82e4-a2ea009c3d22.sqlserver.sequelizer.com
-//                    ;Initial Catalog=db354aa64194f747c182e4a2ea009c3d22
-//                    ;Persist Security Info=True
-//                    ;User ID=vhvuhydbjypfajaj
-//                    ;Password=oFDRSUcntF2vKnQKyrAUUPDztNQn2VeaJ4c75ZVUtEHQjf2NdsEmc6NGbdxedXuE";  
+                //db.ConnectionString = @"Data Source=GYSLAP031\SQL1;Initial Catalog=CarBluMon;Integrated Security=True";
+                db.ConnectionString = @"Data Source=354aa641-94f7-47c1-82e4-a2ea009c3d22.sqlserver.sequelizer.com
+                    ;Initial Catalog=db354aa64194f747c182e4a2ea009c3d22
+                    ;Persist Security Info=True
+                    ;User ID=vhvuhydbjypfajaj
+                    ;Password=oFDRSUcntF2vKnQKyrAUUPDztNQn2VeaJ4c75ZVUtEHQjf2NdsEmc6NGbdxedXuE";  
                 db.Timeout = 10;
                 //debugging
                 //db.LogFormattedSql = true;
