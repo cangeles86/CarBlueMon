@@ -1,0 +1,5 @@
+package com.sanpablo.carbluemon.utils;
+
+public static class Common {
+
+}

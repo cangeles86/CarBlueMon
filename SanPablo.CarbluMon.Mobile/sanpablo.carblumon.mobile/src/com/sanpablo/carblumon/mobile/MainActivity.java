@@ -1,6 +1,9 @@
 package com.sanpablo.carblumon.mobile;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
@@ -11,11 +14,25 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
     Button btnOK;
+    EditText txtUser;
+    EditText txtPass;
+    
+    public boolean isOnline() {
+        ConnectivityManager cm = 
+             (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnected()) {
+            return true;
+        }
+        return false;
+    }
+    
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,19 +45,43 @@ public class MainActivity extends ActionBarActivity {
         }
         
         btnOK = (Button)findViewById(R.id.btnOK);
+        txtUser = (EditText)findViewById(R.id.txtUser);
+        txtPass = (EditText)findViewById(R.id.txtPass);
         
         btnOK.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Intent menu = new Intent(getApplicationContext(), MenuActivity.class);
-				startActivity(menu);
+				Boolean result = true;
+				Toast message;				
+				
+				
+				if (txtUser.getText().toString().trim().equals("")) {
+					result = false;
+					message = Toast.makeText(getApplicationContext(), "Ingrese un usuario", Toast.LENGTH_SHORT);
+					message.show();
+				} else if (txtPass.getText().toString().trim().equals("")) {
+					result = false;
+					message = Toast.makeText(getApplicationContext(), "Ingrese su contraseña", Toast.LENGTH_SHORT);
+					message.show();
+				}
+				if (result) {
+					
+					if (!isOnline()) {
+						message = Toast.makeText(getApplicationContext(), "Verifique su conexion a internet", Toast.LENGTH_SHORT);
+						message.show();
+					}
+					else {
+						if (txtUser.getText().toString().equals("cangeles86@hotmail.com") && txtPass.getText().toString().equals("123456")) {
+							Intent menu = new Intent(getApplicationContext(), MenuActivity.class);
+							startActivity(menu);
+						}
+					}										
+				}
+
 			}
 		});        
-        
-        
-        
     }
 
 

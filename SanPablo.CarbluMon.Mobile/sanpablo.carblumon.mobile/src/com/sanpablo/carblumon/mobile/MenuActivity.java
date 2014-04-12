@@ -1,8 +1,6 @@
 package com.sanpablo.carblumon.mobile;
 
 import java.util.Timer;
-import java.util.TimerTask;
-
 import com.sanpablo.carbluemon.services.WCFServices;
 
 import android.content.Context;
@@ -128,12 +126,11 @@ public class MenuActivity extends ActionBarActivity  {
 				// TODO Auto-generated method stub
 				WCFServices client = new WCFServices();
 				Boolean result = client.SendHelpRequest(1, latitude, longitude);				
-				
 				if (result) {
-					Toast message = Toast.makeText(getApplicationContext(), "Su solicitud ha sido enviada", Toast.LENGTH_SHORT);
+					Toast message = Toast.makeText(getApplicationContext(), "Su solicitud de ayuda fue enviada correctamente", Toast.LENGTH_SHORT);
 					message.show();
 				} else {
-					Toast message = Toast.makeText(getApplicationContext(), "Error de Envio", Toast.LENGTH_SHORT);
+					Toast message = Toast.makeText(getApplicationContext(), "Error la enviar la solicitud, por favor intente nuevamente", Toast.LENGTH_SHORT);
 					message.show();
 				}
 			}

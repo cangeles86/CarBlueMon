@@ -1,0 +1,18 @@
+package com.sanpablo.carbluemon.utils;
+
+import android.app.Activity;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+
+public class Common {
+	public static boolean hasInternet(Activity a) { 
+	    ConnectivityManager cm = 
+	            (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+	       NetworkInfo netInfo = cm.getActiveNetworkInfo();
+	       if (netInfo != null && netInfo.isConnected()) {
+	           return true;
+	       }
+	       return false;
+    }
+}

@@ -1,0 +1,106 @@
+package com.sanpablo.carbluemon.services;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
+
+public class WCFServices {
+	
+	public Boolean SendECGHistory(int user, double mark)
+	{
+		Boolean result = null;
+		String errorMessage = "";
+		HttpClient httpClient = new DefaultHttpClient();
+		HttpPost post =
+			    new HttpPost
+			    ("http://servicecarblumon.apphb.com/ECGHistory/ECGHistory.svc/ECGHistories");
+		post.setHeader("content-type", "application/json");
+				
+		try {			
+			JSONObject helpRequets = new JSONObject();
+			
+			helpRequets.put("Marker", mark);
+			
+			JSONObject userRequest = new JSONObject();
+			userRequest.put("Id", user);
+			
+			helpRequets.put("User",userRequest);
+			
+			StringEntity entity = new StringEntity(helpRequets.toString());
+			post.setEntity(entity);
+			
+			HttpResponse resp = httpClient.execute(post);
+            String respStr = EntityUtils.toString(resp.getEntity());
+            errorMessage  = "";
+            result =  true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			errorMessage = e.getMessage();
+			result = false;
+		}
+			
+		return result;		
+	}
+	
+	public Boolean SendHelpRequest(int user, double latitude, double longitude)
+	{
+		Boolean result = null;
+		String errorMessage = "";
+		HttpClient httpClient = new DefaultHttpClient();
+		HttpPost post =
+			    new HttpPost
+			    ("http://servicecarblumon.apphb.com/HelpRequest/HelpRequest.svc/HelpRequests");
+		post.setHeader("content-type", "application/json");
+				
+		try {			
+			JSONObject helpRequets = new JSONObject();
+			
+			helpRequets.put("Latitude", latitude);
+			helpRequets.put("Longitude", longitude);			
+			helpRequets.put("State", true);
+			
+			JSONObject userRequest = new JSONObject();
+			userRequest.put("Id", user);
+			
+			helpRequets.put("User",userRequest);
+			
+			StringEntity entity = new StringEntity(helpRequets.toString());
+			post.setEntity(entity);
+			
+			HttpResponse resp = httpClient.execute(post);
+            String respStr = EntityUtils.toString(resp.getEntity());
+            if (respStr.equals("true")) {
+				result = true;
+			}
+            else {
+				result = false;
+			}            
+		} catch (Exception e) {
+			// TODO: handle exception
+			errorMessage = e.getMessage();
+			result = false;
+		}			
+		return result;		
+	}
+	
+	public Boolean GetMedicine()
+	{
+		return true;
+	}
+	public Boolean GetPhoneDirectory()
+	{
+		return true;
+	}
+	public Boolean GetStatePatient()
+	{
+		return true;
+	}
+	public Boolean SetStatePatient()
+	{
+		return true;
+	}
+}
