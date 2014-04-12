@@ -10,7 +10,7 @@ namespace SanPablo.CarBluMon.DataAccess.Allocation
         public DAAllocationMap()
         {
             Table("Allocation");
-            Id(i => i.Id, m => { m.Column("id"); m.Generator(Generators.Identity); });
+            Id(i => i.Id, m => { m.Column("id"); m.Generator(Generators.Identity);});
             ManyToOne(i => i.Patient, m => { m.Column("patientId"); });
             ManyToOne(i => i.Equipment, m => { m.Column("equipmentId"); });
             Property(i => i.State, m => { m.Column("state"); });

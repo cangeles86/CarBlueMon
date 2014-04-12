@@ -99,6 +99,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="RegistrationModule\Allocation\AllocationSave.aspx" />
     <Content Include="RegistrationModule\Equipment\EquipmentList.aspx" />
     <Content Include="RegistrationModule\Equipment\EquipmentSave.aspx" />
     <Content Include="RegistrationModule\Patient\PatientList.aspx" />
@@ -142,6 +143,13 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationModule\Allocation\AllocationSave.aspx.cs">
+      <DependentUpon>AllocationSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationModule\Allocation\AllocationSave.aspx.designer.cs">
+      <DependentUpon>AllocationSave.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationModule\Equipment\EquipmentList.aspx.cs">
       <DependentUpon>EquipmentList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

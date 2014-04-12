@@ -30,5 +30,16 @@ namespace SanPablo.CarBluMon.BusinessLogic.Allocation
         {
             return new DAAllocation().Find(criteriaListEq);
         }
+
+        public bool Register(BEPatient patient, BEEquipment holter, BEEquipment mobile)
+        {
+            return new DAAllocation().Register(patient, holter, mobile);
+        }
+
+        public bool Modify(BEAllocation entity, BEEquipment equipment)
+        {
+            return new DAAllocation().Modify(entity, equipment);
+        }
+
     }
 }

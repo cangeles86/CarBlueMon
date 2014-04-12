@@ -24,6 +24,7 @@ namespace SanPablo.CarBluMon.DataAccess.HibernateManager
 {
     internal static class HibernateManager
     {
+        private static ISession _currentSession;
         private static Configuration ConfigureHibernate()
         {            
             var configure = new Configuration();
@@ -82,16 +83,18 @@ namespace SanPablo.CarBluMon.DataAccess.HibernateManager
             return mapping;
         }
 
-        internal static ISessionFactory GetSession()
+        internal static ISession GetSession()
         {
-            Configuration hbmConfig;
-            ISessionFactory currentSession;
-            hbmConfig = ConfigureHibernate();
-            HbmMapping mappings = GetMappings();
-            hbmConfig.AddDeserializedMapping(mappings, "SanPablo.CarBluMon.DataAccess");
-            SchemaMetadataUpdater.QuoteTableAndColumns(hbmConfig);
-            currentSession = hbmConfig.BuildSessionFactory();
-            return currentSession;
+            if (_currentSession == null)
+            {
+                Configuration hbmConfig;
+                hbmConfig = ConfigureHibernate();
+                HbmMapping mappings = GetMappings();
+                hbmConfig.AddDeserializedMapping(mappings, "SanPablo.CarBluMon.DataAccess");
+                SchemaMetadataUpdater.QuoteTableAndColumns(hbmConfig);
+                _currentSession = hbmConfig.BuildSessionFactory().OpenSession();
+            }            
+            return _currentSession;
         }
 
     }

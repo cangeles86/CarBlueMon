@@ -26,7 +26,7 @@
                             <ul>
                                 <li><a href="/RegistrationModule/Equipment/EquipmentList.aspx">Equipos</a></li>
                                 <li><a href="/RegistrationModule/Patient/PatientList.aspx">Pacientes</a></li>
-                                <li><a href="#">Asignación de Equipo</a></li>
+                                <li><a href="/RegistrationModule/Allocation/AllocationSave.aspx">Asignación de Equipo</a></li>
                             </ul>
                         </div>
                         <div id="SubMenuArea" class="last mmAlertList">

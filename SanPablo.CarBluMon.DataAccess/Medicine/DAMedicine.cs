@@ -13,7 +13,7 @@ namespace SanPablo.CarBluMon.DataAccess.Medicine
             BEMedicine result = new BEMedicine();
             try
             {
-                ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
+                ISession session = HibernateManager.HibernateManager.GetSession();
                 result = (BEMedicine)session.CreateCriteria(typeof(BEMedicine)).Add(Expression.Eq("User.Id", code)).List<BEMedicine>()[0];
                 return result;
                 

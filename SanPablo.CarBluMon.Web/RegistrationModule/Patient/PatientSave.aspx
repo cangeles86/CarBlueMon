@@ -6,13 +6,13 @@
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:20%">Nombre</td>
-                <td style="width:40%"><asp:TextBox ID="txtName" runat="server"></asp:TextBox></td>
+                <td style="width:40%"><asp:TextBox ID="txtName" runat="server" MaxLength="150"></asp:TextBox></td>
                 <td style="width:20%">&nbsp;</td>
             </tr>
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:20%">Apellido</td>
-                <td style="width:40%"><asp:TextBox ID="txtLastName" runat="server"></asp:TextBox></td>
+                <td style="width:40%"><asp:TextBox ID="txtLastName" runat="server" MaxLength="150"></asp:TextBox></td>
                 <td style="width:20%">&nbsp;</td>
             </tr>
             <tr>
@@ -24,31 +24,31 @@
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:20%">N° Documento</td>
-                <td style="width:40%"><asp:TextBox ID="txtDocumentNumber" runat="server"></asp:TextBox></td>
+                <td style="width:40%"><asp:TextBox ID="txtDocumentNumber" runat="server" MaxLength="45"></asp:TextBox></td>
                 <td style="width:20%">&nbsp;</td>
             </tr>
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:20%">Dirección</td>
-                <td style="width:40%"><asp:TextBox ID="txtAddress" runat="server"></asp:TextBox></td>
+                <td style="width:40%"><asp:TextBox ID="txtAddress" runat="server" MaxLength="400"></asp:TextBox></td>
                 <td style="width:20%">&nbsp;</td>
             </tr>
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:20%">Correo</td>
-                <td style="width:40%"><asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td>
+                <td style="width:40%"><asp:TextBox ID="txtEmail" runat="server" MaxLength="150"></asp:TextBox></td>
                 <td style="width:20%">&nbsp;</td>
             </tr>
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:20%">Telefono de Casa</td>
-                <td style="width:40%"><asp:TextBox ID="txtHomePhone" runat="server"></asp:TextBox></td>
+                <td style="width:40%"><asp:TextBox ID="txtHomePhone" runat="server" MaxLength="25"></asp:TextBox></td>
                 <td style="width:20%">&nbsp;</td>
             </tr>
             <tr>
                 <td style="width:20%">&nbsp;</td>
                 <td style="width:20%">Telefono Movil</td>
-                <td style="width:40%"><asp:TextBox ID="txtMobile" runat="server"></asp:TextBox></td>
+                <td style="width:40%"><asp:TextBox ID="txtMobile" runat="server" MaxLength="25"></asp:TextBox></td>
                 <td style="width:20%">&nbsp;</td>
             </tr>
             <tr>

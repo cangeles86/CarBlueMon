@@ -7,11 +7,12 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
 {
     public abstract class RepositoryManager<T>: IRepositoryManager<T> where T : class
     {
-        public bool Register(T entity)
+        public virtual bool Register(T entity)
         {
             try
             {
-                ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
+                ISession session = HibernateManager.HibernateManager.GetSession();
+                
                 session.Save(entity);
                 session.Flush();
                 return true;
@@ -25,11 +26,11 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
 
         }
 
-        public bool Modify(T entity)
+        public virtual bool Modify(T entity)
         {
             try
             {
-                ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
+                ISession session = HibernateManager.HibernateManager.GetSession();
                 session.Update(entity);
                 session.Flush();
                 return true;
@@ -42,11 +43,11 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
             }
         }
 
-        public bool Remove(T entity)
+        public virtual bool Remove(T entity)
         {
             try
             {
-                ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
+                ISession session = HibernateManager.HibernateManager.GetSession();
                 session.Delete(entity);
                 session.Flush();
                 return true;
@@ -59,11 +60,11 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
             }
         }
 
-        public T FindById(int code)
+        public virtual T FindById(int code)
         {
             try
             {
-                ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
+                ISession session = HibernateManager.HibernateManager.GetSession();
                 T entidad = (T)session.Get<T>(code);    
                 return entidad;
             }
@@ -73,13 +74,13 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
                 return null;
             }          
         }
-                
-        public List<T> Find(params string [][] criteriaListEq)
+
+        public virtual List<T> Find(params string[][] criteriaListEq)
         {
             List<T> list;
             try
             {
-                ISession session = HibernateManager.HibernateManager.GetSession().OpenSession();
+                ISession session = HibernateManager.HibernateManager.GetSession();
                 if (criteriaListEq == null)
                 {
                     list = (List<T>)session.CreateCriteria(typeof(T)).List<T>();
@@ -105,6 +106,10 @@ namespace SanPablo.CarBluMon.DataAccess.RepositoryManager
                                 case "Eq|Ns":
                                     criteria.CreateAlias(item[3], "ref");
                                     criteria.Add(Expression.Eq("ref." + item[1], item[2]));
+                                    break;
+                                case "Eq|NsIn":
+                                    criteria.CreateAlias(item[3], "ref");
+                                    criteria.Add(Expression.Eq("ref." + item[1], int.Parse(item[2])));
                                     break;
                                 case "Lk":
                                     criteria.Add(Expression.Like(item[1], item[2] + "%"));
