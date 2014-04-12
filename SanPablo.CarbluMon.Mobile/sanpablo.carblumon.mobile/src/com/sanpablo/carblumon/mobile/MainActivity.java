@@ -77,6 +77,10 @@ public class MainActivity extends ActionBarActivity {
 							Intent menu = new Intent(getApplicationContext(), MenuActivity.class);
 							startActivity(menu);
 						}
+						else {
+							message = Toast.makeText(getApplicationContext(), "Usuario o Contraseña no es correcta", Toast.LENGTH_SHORT);
+							message.show();
+						}
 					}										
 				}
 
