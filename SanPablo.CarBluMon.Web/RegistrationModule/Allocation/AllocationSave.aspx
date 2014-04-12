@@ -143,7 +143,7 @@
                 <td style="width: 2px">
                     <asp:Button ID="btnSave" runat="server" Text="Guardar" CssClass="ui-button" Enabled="False" OnClientClick="return validate();" OnClick="btnSave_Click" />
                     <br />
-                    <asp:Button ID="btnRemove" runat="server" Text="Eliminar" CssClass="ui-button" Enabled="False" OnClick="btnRemove_Click" />
+                    <asp:Button ID="btnRemove" runat="server" Text="Eliminar" CssClass="ui-button" Enabled="False" OnClientClick="if (confirm('¿ Desea eliminar el registro ?')) { return true; } else { return false; }" OnClick="btnRemove_Click" />
                     <br />
                     <asp:Button ID="btnCancel" runat="server" Text="Cancelar" CssClass="ui-button" OnClick="btnCancel_Click" />
                 </td>
